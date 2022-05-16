@@ -51,7 +51,7 @@ def app(df, features, target):
 
 
     if st.button("Predict"):
-        response = requests.post('http://0.0.0.0:8000/predict', json=df)
+        response = requests.post('http://127.0.0.1:8000/predict', json=df)
         #response = requests.post('http://localhost:8000/predict', json=df)
         prediction = response.text
         st.success(f"The prediction of the model is: {prediction}")
