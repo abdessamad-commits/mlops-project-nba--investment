@@ -1,4 +1,3 @@
-web: sh setup.sh && web: uvicorn app.main:app --host=0.0.0.0 --port=${PORT:-8000} && streamlit run app.py
-
+web: sh setup.sh && web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker :main.py && streamlit run app.py
 
 
