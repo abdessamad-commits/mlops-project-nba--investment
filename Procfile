@@ -1,2 +1,4 @@
-web:  uvicorn main:app --reload && streamlit run app.py
+web: sh setup.sh && web: uvicorn app.main:app --host=0.0.0.0 --port=${PORT:-8000} && streamlit run app.py
+
+
 
