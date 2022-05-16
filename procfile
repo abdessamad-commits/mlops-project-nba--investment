@@ -1,2 +1,2 @@
-web: sh setup.sh && uvicorn main:app --reload && streamlit run app.py
+web: sh setup.sh && heroku ps:scale web=1 && uvicorn main:app --reload && streamlit run app.py
 
