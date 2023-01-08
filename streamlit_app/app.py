@@ -25,8 +25,8 @@ def read_dataset(file):
     target = df["Outcome Career Length"]
     return df, features, target
 
-df, features, target = read_dataset('data/nba_logreg.csv')
-
+df, features, target = read_dataset('./data/nba_logreg.csv')
+#df, features, target = read_dataset('fronted/nba_logreg.csv')
 
 st.sidebar.title('Tabs')
 selection = st.sidebar.radio("", list(PAGES.keys()))

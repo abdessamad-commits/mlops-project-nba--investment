@@ -30,9 +30,9 @@ def app(df, features, target):
         "What type of investors are you ?",
         ('Risk Taker', 'Cautious Investor'))
     if option_10 == 'Cautious Investor':
-        st.write("You are the risk taker type of investors so the model used for prediction maximises precision")
+        st.write("You are the Cautious type of investors so the model used for prediction maximises precision")
     else:
-        st.write("You are the Cautious type of investors so the model used for prediction maximises recall")
+        st.write("You are the Risk Taker type of investors so the model used for prediction maximises recall")
 
 
     df = {
@@ -51,7 +51,7 @@ def app(df, features, target):
 
 
     if st.button("Predict"):
-        response = requests.post('http://127.0.0.1:8000/predict', json=df)
+        response = requests.post('http://0.0.0.0:8000/predict', json=df)
         #response = requests.post('http://localhost:8000/predict', json=df)
         prediction = response.text
         st.success(f"The prediction of the model is: {prediction}")

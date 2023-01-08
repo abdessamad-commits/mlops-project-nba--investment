@@ -14,20 +14,22 @@ model_saved_precision = joblib.load('model/fine_tuned_svm_precision.joblib')
 
 
 class Data(BaseModel):
-    gp : int
-    minn : int
-    pts : int
-    fgm : int
-    fga : int
-    fgpercent : int
-    ftm : int
-    ftpercent : int
-    reb : int
-    option_10 : str
+    gp: float
+    minn: float
+    pts: float
+    fgm: float
+    fga: float
+    fgpercent: float
+    ftm: float
+    ftpercent: float
+    reb: float
+    option_10: str
+
 
 @app.get('/')
 def index():
     return {'message': 'Hello, World'}
+
 
 @app.get('/home')
 def read_home():
@@ -37,11 +39,10 @@ def read_home():
     return {'message': 'Welcome to the NBA players investment API'}
 
 
-
 @app.post("/predict")
 def predict(data: Data):
     data = data.dict()
-    #data_df = pd.DataFrame.from_dict([data_dict])
+    # data_df = pd.DataFrame.from_dict([data_dict])
     gp = data['gp']
     minn = data['minn']
     pts = data['pts']
@@ -62,7 +63,5 @@ def predict(data: Data):
     return {'prediction ': prediction.tolist()}
 
 
-
 if __name__ == '__main__':
     uvicorn.run(app, host='127.0.0.1', port=8000)
-
