@@ -24,8 +24,5 @@ st.markdown(
     ### See more complex demos
     - Use a neural net to [analyze the Udacity Self-driving Car Image
         Dataset](https://github.com/streamlit/demo-self-driving)
-    - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
 """
 )
-
-

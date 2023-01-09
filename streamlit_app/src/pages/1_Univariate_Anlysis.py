@@ -1,10 +1,11 @@
-import streamlit as st
 import pandas as pd
-from helpers import read_dataset
 import plotly.express as px
+import streamlit as st
+from helpers import read_dataset
 
-
-df, features, target = read_dataset("/Users/abdessamadbaahmed/Desktop/livrable_mp_data/data/nba_logreg.csv")
+df, features, target = read_dataset(
+    "/Users/abdessamadbaahmed/Desktop/livrable_mp_data/data/nba_logreg.csv"
+)
 
 tab1, tab2 = st.tabs(["Summary Statistics", "Viz"])
 
@@ -24,13 +25,14 @@ with tab1:
         st.plotly_chart(dist)
 
 
-
 with tab2:
     option = st.selectbox(
         "Please select one Numerical variable to vizualize", list(features)
     )
 
-    choice = st.selectbox("Please select the chosen plot", ("Box Plot", "Histogram", "Violin Plot"))
+    choice = st.selectbox(
+        "Please select the chosen plot", ("Box Plot", "Histogram", "Violin Plot")
+    )
     if choice == "Histogram":
         with st.container():
             # st.write('First column')

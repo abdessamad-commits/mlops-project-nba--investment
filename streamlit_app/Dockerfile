@@ -3,6 +3,9 @@ FROM python:3.9-slim
 # Set the working directory
 WORKDIR /streamlit_app
 
+# Create a volume at /streamlit_app/
+VOLUME /streamlit_app/
+
 # Copy the current directory contents into the container at /app
 COPY . /streamlit_app
 

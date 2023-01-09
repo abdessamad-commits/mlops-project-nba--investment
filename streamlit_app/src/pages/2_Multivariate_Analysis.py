@@ -1,10 +1,13 @@
-import streamlit as st
 import time
+
 import numpy as np
 import plotly.express as px
-from helpers import read_dataset, pearson_corr
+import streamlit as st
+from helpers import pearson_corr, read_dataset
 
-df, features, target = read_dataset("/Users/abdessamadbaahmed/Desktop/livrable_mp_data/data/nba_logreg.csv")
+df, features, target = read_dataset(
+    "/Users/abdessamadbaahmed/Desktop/livrable_mp_data/data/nba_logreg.csv"
+)
 
 option_1 = st.selectbox(
     "Please select the variable to vizualize on the x-axis", list(features)
@@ -26,9 +29,11 @@ choice2 = st.selectbox("Labeled Data", ("Yes", "No"))
 df["label"] = df["Outcome Career Length"].astype(str)
 
 if choice2 == "Yes":
-    # compute the pearson coefficent 
+    # compute the pearson coefficent
     with st.container():
-        st.write(f"Pearson correlation between the variables '{option_1}' and '{option_2} is': {pearson_corr(df, option_1, option_2):.2f}")
+        st.write(
+            f"Pearson correlation between the variables '{option_1}' and '{option_2} is': {pearson_corr(df, option_1, option_2):.2f}"
+        )
         fig3 = px.scatter(
             df,
             x=option_1,
@@ -45,11 +50,11 @@ if choice2 == "Yes":
         st.plotly_chart(fig3)
 
 
-
-
 else:
     with st.container():
-        st.write(f"Pearson correlation between the variables '{option_1}' and '{option_2} is': {pearson_corr(df, option_1, option_2):.2f}")
+        st.write(
+            f"Pearson correlation between the variables '{option_1}' and '{option_2} is': {pearson_corr(df, option_1, option_2):.2f}"
+        )
         fig3 = px.scatter(
             df,
             x=option_1,
