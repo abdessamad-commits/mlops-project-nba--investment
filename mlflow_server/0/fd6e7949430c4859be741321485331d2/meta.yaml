@@ -1,0 +1,15 @@
+artifact_uri: /mlflow_server/0/fd6e7949430c4859be741321485331d2/artifacts
+end_time: 1673437480559
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: fd6e7949430c4859be741321485331d2
+run_uuid: fd6e7949430c4859be741321485331d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673437479628
+status: 3
+tags: []
+user_id: abdessamadbaahmed

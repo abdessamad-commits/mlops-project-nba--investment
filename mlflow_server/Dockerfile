@@ -9,6 +9,7 @@ WORKDIR /mlflow_server
 # Install MLFlow
 RUN pip3 install mlflow==1.7.2
 
+
 # Run the MLFlow server
 CMD mlflow server --host 0.0.0.0 --backend-store-uri /mlflow_server/
 
