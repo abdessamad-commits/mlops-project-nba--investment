@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/4adb218fd4534346b208235982f2c919/artifacts
+end_time: 1673441416978
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: 4adb218fd4534346b208235982f2c919
+run_name: skillful-owl-658
+run_uuid: 4adb218fd4534346b208235982f2c919
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441415984
+status: 3
+tags: []
+user_id: abdessamadbaahmed

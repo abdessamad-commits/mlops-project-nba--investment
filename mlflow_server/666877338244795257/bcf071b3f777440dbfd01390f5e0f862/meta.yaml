@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/bcf071b3f777440dbfd01390f5e0f862/artifacts
+end_time: 1673441418103
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: bcf071b3f777440dbfd01390f5e0f862
+run_name: salty-gnat-960
+run_uuid: bcf071b3f777440dbfd01390f5e0f862
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441417055
+status: 3
+tags: []
+user_id: abdessamadbaahmed

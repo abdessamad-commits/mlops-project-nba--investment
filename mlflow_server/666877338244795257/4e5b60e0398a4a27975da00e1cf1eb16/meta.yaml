@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/4e5b60e0398a4a27975da00e1cf1eb16/artifacts
+end_time: 1673441365388
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: 4e5b60e0398a4a27975da00e1cf1eb16
+run_name: judicious-snipe-75
+run_uuid: 4e5b60e0398a4a27975da00e1cf1eb16
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441364205
+status: 3
+tags: []
+user_id: abdessamadbaahmed

@@ -159,5 +159,5 @@ websocket-client==1.4.2
 websockets==10.3
 Werkzeug==2.2.2
 widgetsnbextension==3.6.0
-xgboost==1.7.3
+xgboost==1.7.2
 zipp==3.8.0

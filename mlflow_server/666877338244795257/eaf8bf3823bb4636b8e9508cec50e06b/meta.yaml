@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/eaf8bf3823bb4636b8e9508cec50e06b/artifacts
+end_time: 1673441383681
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: eaf8bf3823bb4636b8e9508cec50e06b
+run_name: dazzling-mole-751
+run_uuid: eaf8bf3823bb4636b8e9508cec50e06b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441381801
+status: 3
+tags: []
+user_id: abdessamadbaahmed

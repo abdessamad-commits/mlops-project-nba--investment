@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/d90d549e92bb420a935de985a2f0b236/artifacts
+end_time: 1673441415884
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: d90d549e92bb420a935de985a2f0b236
+run_name: indecisive-dove-911
+run_uuid: d90d549e92bb420a935de985a2f0b236
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441414942
+status: 3
+tags: []
+user_id: abdessamadbaahmed

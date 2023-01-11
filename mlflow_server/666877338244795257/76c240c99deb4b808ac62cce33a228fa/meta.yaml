@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/76c240c99deb4b808ac62cce33a228fa/artifacts
+end_time: 1673441413637
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: 76c240c99deb4b808ac62cce33a228fa
+run_name: respected-toad-425
+run_uuid: 76c240c99deb4b808ac62cce33a228fa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441412572
+status: 3
+tags: []
+user_id: abdessamadbaahmed

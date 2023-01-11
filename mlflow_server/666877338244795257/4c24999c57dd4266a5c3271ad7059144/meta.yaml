@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/4c24999c57dd4266a5c3271ad7059144/artifacts
+end_time: 1673441373241
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: 4c24999c57dd4266a5c3271ad7059144
+run_name: carefree-bee-462
+run_uuid: 4c24999c57dd4266a5c3271ad7059144
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441371514
+status: 3
+tags: []
+user_id: abdessamadbaahmed

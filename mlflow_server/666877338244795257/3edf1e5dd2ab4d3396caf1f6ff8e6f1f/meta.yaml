@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/3edf1e5dd2ab4d3396caf1f6ff8e6f1f/artifacts
+end_time: 1673441359672
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: 3edf1e5dd2ab4d3396caf1f6ff8e6f1f
+run_name: rare-dolphin-503
+run_uuid: 3edf1e5dd2ab4d3396caf1f6ff8e6f1f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441357777
+status: 3
+tags: []
+user_id: abdessamadbaahmed

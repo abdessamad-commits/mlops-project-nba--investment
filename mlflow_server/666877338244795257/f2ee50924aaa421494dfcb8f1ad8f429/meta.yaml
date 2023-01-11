@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/f2ee50924aaa421494dfcb8f1ad8f429/artifacts
+end_time: 1673441397321
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: f2ee50924aaa421494dfcb8f1ad8f429
+run_name: flawless-mare-287
+run_uuid: f2ee50924aaa421494dfcb8f1ad8f429
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441396100
+status: 3
+tags: []
+user_id: abdessamadbaahmed
