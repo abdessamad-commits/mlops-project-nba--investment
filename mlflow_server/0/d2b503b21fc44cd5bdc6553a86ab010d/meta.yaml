@@ -1,0 +1,15 @@
+artifact_uri: /mlflow_server/0/d2b503b21fc44cd5bdc6553a86ab010d/artifacts
+end_time: 1673439191165
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: d2b503b21fc44cd5bdc6553a86ab010d
+run_uuid: d2b503b21fc44cd5bdc6553a86ab010d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673439190798
+status: 3
+tags: []
+user_id: abdoss
