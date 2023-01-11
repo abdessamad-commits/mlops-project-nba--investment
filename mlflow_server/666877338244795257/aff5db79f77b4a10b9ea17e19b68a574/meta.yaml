@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/aff5db79f77b4a10b9ea17e19b68a574/artifacts
+end_time: 1673441401534
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: aff5db79f77b4a10b9ea17e19b68a574
+run_name: bright-dove-506
+run_uuid: aff5db79f77b4a10b9ea17e19b68a574
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441400748
+status: 3
+tags: []
+user_id: abdessamadbaahmed

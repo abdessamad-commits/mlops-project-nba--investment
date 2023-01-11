@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/e69350caffa24e56a87259e4d46a586c/artifacts
+end_time: 1673441410443
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: e69350caffa24e56a87259e4d46a586c
+run_name: enthused-mare-602
+run_uuid: e69350caffa24e56a87259e4d46a586c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441409547
+status: 3
+tags: []
+user_id: abdessamadbaahmed

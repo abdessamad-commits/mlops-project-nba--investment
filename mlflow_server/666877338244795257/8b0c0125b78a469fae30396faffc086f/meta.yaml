@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/8b0c0125b78a469fae30396faffc086f/artifacts
+end_time: 1673441368732
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: 8b0c0125b78a469fae30396faffc086f
+run_name: gentle-moose-670
+run_uuid: 8b0c0125b78a469fae30396faffc086f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441367656
+status: 3
+tags: []
+user_id: abdessamadbaahmed

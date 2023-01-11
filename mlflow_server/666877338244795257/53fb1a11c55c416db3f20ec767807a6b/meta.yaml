@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/666877338244795257/53fb1a11c55c416db3f20ec767807a6b/artifacts
+end_time: 1673441362190
+entry_point_name: ''
+experiment_id: '666877338244795257'
+lifecycle_stage: active
+run_id: 53fb1a11c55c416db3f20ec767807a6b
+run_name: redolent-zebra-498
+run_uuid: 53fb1a11c55c416db3f20ec767807a6b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673441361254
+status: 3
+tags: []
+user_id: abdessamadbaahmed
