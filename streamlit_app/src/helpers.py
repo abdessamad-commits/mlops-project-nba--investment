@@ -10,9 +10,9 @@ from sklearn.preprocessing import MinMaxScaler
 def read_dataset(file):
     """
     Read the dataset from a csv file
-    
+
     :param file: path to the csv file
-    
+
     :return: a dataframe, the features and the target
     """
     try:
@@ -51,6 +51,7 @@ def read_dataset(file):
     target = df["Outcome Career Length"]
     return df, features, target
 
+
 def pearson_corr(df, col1, col2):
     """
     Calculate Pearson correlation between two columns in a dataframe
@@ -68,6 +69,7 @@ def pearson_corr(df, col1, col2):
     # Calculate Pearson correlation
     corr, _ = pearsonr(df[col1], df[col2])
     return corr
+
 
 def feature_importance_logistic_regression(features, target, metric="f1", penalty="l2"):
     """
@@ -107,7 +109,8 @@ def feature_importance_logistic_regression(features, target, metric="f1", penalt
         y="Coefficient",
         title=f"Feature Selection by {penalty.upper()} Penalized Logistic Regression (maximizing {metric})",
     )
-    
+
+
 def feature_importance_tree_model(features, target, tree_model):
     """
     this function takes the features and the target and the metric to maximize and returns a bar chart of the feature importance
@@ -122,9 +125,15 @@ def feature_importance_tree_model(features, target, tree_model):
     tree_model.fit(features, target)
 
     # Create a dataframe of feature coefficients and feature names
-    feature_importance = pd.DataFrame({'Feature': features.columns, 'Importance': tree_model.feature_importances_})
-    feature_importance.sort_values(by=['Importance'], inplace=True)
-    
+    feature_importance = pd.DataFrame(
+        {"Feature": features.columns, "Importance": tree_model.feature_importances_}
+    )
+    feature_importance.sort_values(by=["Importance"], inplace=True)
+
     # Create a bar chart of the feature importances
-    return px.bar(feature_importance, x='Feature', y='Importance', title=f"Feature Selection by default {tree_model.__class__.__name__}")
-   
+    return px.bar(
+        feature_importance,
+        x="Feature",
+        y="Importance",
+        title=f"Feature Selection by default {tree_model.__class__.__name__}",
+    )

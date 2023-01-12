@@ -1,6 +1,0 @@
-artifact_location: mlflow-artifacts:/666877338244795257
-creation_time: 1673441340627
-experiment_id: '666877338244795257'
-last_update_time: 1673441340627
-lifecycle_stage: active
-name: nba-investment-experiment

@@ -52,7 +52,6 @@ with tab1:
             )
             st.plotly_chart(fig3)
 
-
     else:
         with st.container():
             st.write(
