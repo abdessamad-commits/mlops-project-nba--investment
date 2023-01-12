@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/d3e256b68eb04d1c9a2802f59d49f8c7/artifacts
+end_time: 1673534733958
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d3e256b68eb04d1c9a2802f59d49f8c7
+run_name: rumbling-midge-24
+run_uuid: d3e256b68eb04d1c9a2802f59d49f8c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534733610
+status: 3
+tags: []
+user_id: abdessamadbaahmed

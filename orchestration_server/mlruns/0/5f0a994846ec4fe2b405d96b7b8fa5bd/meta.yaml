@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/5f0a994846ec4fe2b405d96b7b8fa5bd/artifacts
+end_time: 1673534577586
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5f0a994846ec4fe2b405d96b7b8fa5bd
+run_name: grandiose-koi-505
+run_uuid: 5f0a994846ec4fe2b405d96b7b8fa5bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534577359
+status: 3
+tags: []
+user_id: abdessamadbaahmed

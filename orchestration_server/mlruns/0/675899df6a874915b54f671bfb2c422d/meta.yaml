@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/675899df6a874915b54f671bfb2c422d/artifacts
+end_time: 1673534741624
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 675899df6a874915b54f671bfb2c422d
+run_name: charming-penguin-752
+run_uuid: 675899df6a874915b54f671bfb2c422d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534741262
+status: 3
+tags: []
+user_id: abdessamadbaahmed

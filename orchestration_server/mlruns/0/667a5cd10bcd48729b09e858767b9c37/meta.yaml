@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/667a5cd10bcd48729b09e858767b9c37/artifacts
+end_time: 1673534741253
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 667a5cd10bcd48729b09e858767b9c37
+run_name: rare-jay-160
+run_uuid: 667a5cd10bcd48729b09e858767b9c37
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534740984
+status: 3
+tags: []
+user_id: abdessamadbaahmed

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/49ef1d4863a347f9a1513a7a8bebecf7/artifacts
+end_time: 1673533921108
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 49ef1d4863a347f9a1513a7a8bebecf7
+run_name: smiling-dog-264
+run_uuid: 49ef1d4863a347f9a1513a7a8bebecf7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533920832
+status: 3
+tags: []
+user_id: abdessamadbaahmed

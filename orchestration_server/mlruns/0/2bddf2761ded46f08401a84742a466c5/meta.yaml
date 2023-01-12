@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/2bddf2761ded46f08401a84742a466c5/artifacts
+end_time: 1673533911975
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2bddf2761ded46f08401a84742a466c5
+run_name: luminous-panda-157
+run_uuid: 2bddf2761ded46f08401a84742a466c5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533911579
+status: 3
+tags: []
+user_id: abdessamadbaahmed

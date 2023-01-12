@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/e63d49365699415aae94833df1fee3a4/artifacts
+end_time: 1673534570377
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e63d49365699415aae94833df1fee3a4
+run_name: unequaled-wren-260
+run_uuid: e63d49365699415aae94833df1fee3a4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534570000
+status: 3
+tags: []
+user_id: abdessamadbaahmed

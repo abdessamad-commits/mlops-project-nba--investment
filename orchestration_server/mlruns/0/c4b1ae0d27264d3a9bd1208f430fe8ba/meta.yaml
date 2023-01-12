@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/c4b1ae0d27264d3a9bd1208f430fe8ba/artifacts
+end_time: 1673534740674
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c4b1ae0d27264d3a9bd1208f430fe8ba
+run_name: bemused-slug-889
+run_uuid: c4b1ae0d27264d3a9bd1208f430fe8ba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534740442
+status: 3
+tags: []
+user_id: abdessamadbaahmed

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/140f45d97841422da2b07aa781448ccf/artifacts
+end_time: 1673534564975
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 140f45d97841422da2b07aa781448ccf
+run_name: indecisive-koi-11
+run_uuid: 140f45d97841422da2b07aa781448ccf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534564742
+status: 3
+tags: []
+user_id: abdessamadbaahmed

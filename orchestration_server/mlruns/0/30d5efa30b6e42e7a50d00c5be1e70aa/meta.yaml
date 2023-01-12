@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/30d5efa30b6e42e7a50d00c5be1e70aa/artifacts
+end_time: 1673533918416
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 30d5efa30b6e42e7a50d00c5be1e70aa
+run_name: rumbling-quail-782
+run_uuid: 30d5efa30b6e42e7a50d00c5be1e70aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533918095
+status: 3
+tags: []
+user_id: abdessamadbaahmed

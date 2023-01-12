@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/fc0453fd4a2541b18b79a14e3cb813f2/artifacts
+end_time: 1673533911575
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fc0453fd4a2541b18b79a14e3cb813f2
+run_name: classy-smelt-107
+run_uuid: fc0453fd4a2541b18b79a14e3cb813f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533911178
+status: 3
+tags: []
+user_id: abdessamadbaahmed

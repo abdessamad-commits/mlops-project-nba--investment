@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/402ab67bca174329b56f82d2ea758ab3/artifacts
+end_time: 1673533923708
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 402ab67bca174329b56f82d2ea758ab3
+run_name: bold-hawk-190
+run_uuid: 402ab67bca174329b56f82d2ea758ab3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533923415
+status: 3
+tags: []
+user_id: abdessamadbaahmed

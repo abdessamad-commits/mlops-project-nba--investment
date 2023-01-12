@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/9845e523244440738c6582689c5810ed/artifacts
+end_time: 1673534736593
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9845e523244440738c6582689c5810ed
+run_name: shivering-moth-999
+run_uuid: 9845e523244440738c6582689c5810ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534736416
+status: 3
+tags: []
+user_id: abdessamadbaahmed

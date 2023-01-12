@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/f58e34b7c759481eaa9d4ac0b1549f67/artifacts
+end_time: 1673534739665
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f58e34b7c759481eaa9d4ac0b1549f67
+run_name: rebellious-kit-994
+run_uuid: f58e34b7c759481eaa9d4ac0b1549f67
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534739426
+status: 3
+tags: []
+user_id: abdessamadbaahmed

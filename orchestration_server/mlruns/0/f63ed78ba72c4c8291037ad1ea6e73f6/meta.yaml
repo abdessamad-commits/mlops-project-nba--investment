@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/f63ed78ba72c4c8291037ad1ea6e73f6/artifacts
+end_time: 1673533927925
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f63ed78ba72c4c8291037ad1ea6e73f6
+run_name: illustrious-wolf-409
+run_uuid: f63ed78ba72c4c8291037ad1ea6e73f6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533927424
+status: 3
+tags: []
+user_id: abdessamadbaahmed

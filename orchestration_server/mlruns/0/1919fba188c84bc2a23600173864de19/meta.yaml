@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/1919fba188c84bc2a23600173864de19/artifacts
+end_time: 1673534562767
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1919fba188c84bc2a23600173864de19
+run_name: rumbling-mole-720
+run_uuid: 1919fba188c84bc2a23600173864de19
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534562235
+status: 3
+tags: []
+user_id: abdessamadbaahmed

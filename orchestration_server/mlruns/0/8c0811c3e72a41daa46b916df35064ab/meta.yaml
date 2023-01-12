@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/8c0811c3e72a41daa46b916df35064ab/artifacts
+end_time: 1673534574279
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8c0811c3e72a41daa46b916df35064ab
+run_name: wise-snipe-656
+run_uuid: 8c0811c3e72a41daa46b916df35064ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534573900
+status: 3
+tags: []
+user_id: abdessamadbaahmed

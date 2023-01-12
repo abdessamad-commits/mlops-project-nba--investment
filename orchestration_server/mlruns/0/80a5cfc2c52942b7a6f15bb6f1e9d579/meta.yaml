@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/80a5cfc2c52942b7a6f15bb6f1e9d579/artifacts
+end_time: 1673533920116
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 80a5cfc2c52942b7a6f15bb6f1e9d579
+run_name: glamorous-smelt-665
+run_uuid: 80a5cfc2c52942b7a6f15bb6f1e9d579
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533919648
+status: 3
+tags: []
+user_id: abdessamadbaahmed

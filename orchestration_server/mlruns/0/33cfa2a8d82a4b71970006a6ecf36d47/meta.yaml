@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/33cfa2a8d82a4b71970006a6ecf36d47/artifacts
+end_time: 1673534571604
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 33cfa2a8d82a4b71970006a6ecf36d47
+run_name: stylish-pig-245
+run_uuid: 33cfa2a8d82a4b71970006a6ecf36d47
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534571273
+status: 3
+tags: []
+user_id: abdessamadbaahmed

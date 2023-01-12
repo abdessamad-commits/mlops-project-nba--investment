@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/498abec062d04c459dd33cc3be90354b/artifacts
+end_time: 1673533913741
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 498abec062d04c459dd33cc3be90354b
+run_name: omniscient-owl-56
+run_uuid: 498abec062d04c459dd33cc3be90354b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533913458
+status: 3
+tags: []
+user_id: abdessamadbaahmed

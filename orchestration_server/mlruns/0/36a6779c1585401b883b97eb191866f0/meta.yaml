@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/36a6779c1585401b883b97eb191866f0/artifacts
+end_time: 1673533918856
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 36a6779c1585401b883b97eb191866f0
+run_name: vaunted-zebra-626
+run_uuid: 36a6779c1585401b883b97eb191866f0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533918424
+status: 3
+tags: []
+user_id: abdessamadbaahmed

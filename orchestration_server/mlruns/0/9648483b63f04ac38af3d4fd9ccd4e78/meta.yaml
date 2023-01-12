@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/9648483b63f04ac38af3d4fd9ccd4e78/artifacts
+end_time: 1673534744093
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9648483b63f04ac38af3d4fd9ccd4e78
+run_name: illustrious-ox-420
+run_uuid: 9648483b63f04ac38af3d4fd9ccd4e78
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534743732
+status: 3
+tags: []
+user_id: abdessamadbaahmed

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/5b0582c8e3f14174bbac6db5c2d051ae/artifacts
+end_time: 1673534564017
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5b0582c8e3f14174bbac6db5c2d051ae
+run_name: salty-gull-725
+run_uuid: 5b0582c8e3f14174bbac6db5c2d051ae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534563703
+status: 3
+tags: []
+user_id: abdessamadbaahmed

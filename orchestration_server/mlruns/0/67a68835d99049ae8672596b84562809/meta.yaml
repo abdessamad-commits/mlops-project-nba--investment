@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/67a68835d99049ae8672596b84562809/artifacts
+end_time: 1673534576283
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 67a68835d99049ae8672596b84562809
+run_name: intrigued-mink-533
+run_uuid: 67a68835d99049ae8672596b84562809
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534576004
+status: 3
+tags: []
+user_id: abdessamadbaahmed

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/405b324c33a64faaa8d0b07220e38bdd/artifacts
+end_time: 1673534575372
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 405b324c33a64faaa8d0b07220e38bdd
+run_name: legendary-dove-186
+run_uuid: 405b324c33a64faaa8d0b07220e38bdd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534575142
+status: 3
+tags: []
+user_id: abdessamadbaahmed

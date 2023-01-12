@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/bd4ea9c1d3ee4a95b232d910875494d7/artifacts
+end_time: 1673534730287
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bd4ea9c1d3ee4a95b232d910875494d7
+run_name: whimsical-shark-150
+run_uuid: bd4ea9c1d3ee4a95b232d910875494d7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534729851
+status: 3
+tags: []
+user_id: abdessamadbaahmed

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/edf2ccd7181d493f83810a0accd577d9/artifacts
+end_time: 1673534571817
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: edf2ccd7181d493f83810a0accd577d9
+run_name: useful-fly-789
+run_uuid: edf2ccd7181d493f83810a0accd577d9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534571614
+status: 3
+tags: []
+user_id: abdessamadbaahmed

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/91026f57636d4c96b30f0b24ccdeed72/artifacts
+end_time: 1673534738918
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 91026f57636d4c96b30f0b24ccdeed72
+run_name: resilient-sloth-217
+run_uuid: 91026f57636d4c96b30f0b24ccdeed72
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534738725
+status: 3
+tags: []
+user_id: abdessamadbaahmed

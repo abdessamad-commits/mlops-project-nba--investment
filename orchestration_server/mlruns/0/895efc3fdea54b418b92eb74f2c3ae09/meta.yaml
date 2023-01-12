@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/895efc3fdea54b418b92eb74f2c3ae09/artifacts
+end_time: 1673533925524
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 895efc3fdea54b418b92eb74f2c3ae09
+run_name: persistent-seal-5
+run_uuid: 895efc3fdea54b418b92eb74f2c3ae09
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533925339
+status: 3
+tags: []
+user_id: abdessamadbaahmed

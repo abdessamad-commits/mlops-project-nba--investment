@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/c43c84aa74834acbb3ab4c48dd9a03c8/artifacts
+end_time: 1673533916602
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c43c84aa74834acbb3ab4c48dd9a03c8
+run_name: gaudy-dove-475
+run_uuid: c43c84aa74834acbb3ab4c48dd9a03c8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533916419
+status: 3
+tags: []
+user_id: abdessamadbaahmed

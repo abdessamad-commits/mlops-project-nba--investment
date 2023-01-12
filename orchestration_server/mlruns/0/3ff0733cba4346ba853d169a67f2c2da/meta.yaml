@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/3ff0733cba4346ba853d169a67f2c2da/artifacts
+end_time: 1673534732433
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3ff0733cba4346ba853d169a67f2c2da
+run_name: popular-vole-711
+run_uuid: 3ff0733cba4346ba853d169a67f2c2da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534732146
+status: 3
+tags: []
+user_id: abdessamadbaahmed

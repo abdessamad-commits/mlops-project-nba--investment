@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/510c7b1f1bd1406d8cd8a0b010655e9c/artifacts
+end_time: 1673533911173
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 510c7b1f1bd1406d8cd8a0b010655e9c
+run_name: charming-moth-272
+run_uuid: 510c7b1f1bd1406d8cd8a0b010655e9c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533910943
+status: 3
+tags: []
+user_id: abdessamadbaahmed

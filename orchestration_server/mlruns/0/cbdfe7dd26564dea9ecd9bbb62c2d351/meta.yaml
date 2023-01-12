@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/cbdfe7dd26564dea9ecd9bbb62c2d351/artifacts
+end_time: 1673534569991
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cbdfe7dd26564dea9ecd9bbb62c2d351
+run_name: victorious-deer-121
+run_uuid: cbdfe7dd26564dea9ecd9bbb62c2d351
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534569789
+status: 3
+tags: []
+user_id: abdessamadbaahmed

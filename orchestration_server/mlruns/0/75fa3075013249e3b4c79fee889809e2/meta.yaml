@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/75fa3075013249e3b4c79fee889809e2/artifacts
+end_time: 1673533914078
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 75fa3075013249e3b4c79fee889809e2
+run_name: colorful-shark-109
+run_uuid: 75fa3075013249e3b4c79fee889809e2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533913744
+status: 3
+tags: []
+user_id: abdessamadbaahmed

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/a1e72bd5c43a43bf847ce338e5b12a17/artifacts
+end_time: 1673533915621
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a1e72bd5c43a43bf847ce338e5b12a17
+run_name: upbeat-yak-46
+run_uuid: a1e72bd5c43a43bf847ce338e5b12a17
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533915369
+status: 3
+tags: []
+user_id: abdessamadbaahmed

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/28e4344b04274564bc42c89cc94d30e8/artifacts
+end_time: 1673533924562
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 28e4344b04274564bc42c89cc94d30e8
+run_name: loud-seal-623
+run_uuid: 28e4344b04274564bc42c89cc94d30e8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533924315
+status: 3
+tags: []
+user_id: abdessamadbaahmed

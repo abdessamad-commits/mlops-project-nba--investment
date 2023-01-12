@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/c08607682f144d659693ce86d7206b6d/artifacts
+end_time: 1673534734583
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c08607682f144d659693ce86d7206b6d
+run_name: luxuriant-chimp-711
+run_uuid: c08607682f144d659693ce86d7206b6d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534734197
+status: 3
+tags: []
+user_id: abdessamadbaahmed

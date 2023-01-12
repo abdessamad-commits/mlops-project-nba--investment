@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/dfc43b30009b49e495e9e177d9bc20b2/artifacts
+end_time: 1673533924768
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dfc43b30009b49e495e9e177d9bc20b2
+run_name: handsome-croc-877
+run_uuid: dfc43b30009b49e495e9e177d9bc20b2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533924571
+status: 3
+tags: []
+user_id: abdessamadbaahmed

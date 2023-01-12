@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/e1b784241b2b4914a9bc3eeb485d8381/artifacts
+end_time: 1673534731821
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e1b784241b2b4914a9bc3eeb485d8381
+run_name: charming-worm-37
+run_uuid: e1b784241b2b4914a9bc3eeb485d8381
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534731466
+status: 3
+tags: []
+user_id: abdessamadbaahmed

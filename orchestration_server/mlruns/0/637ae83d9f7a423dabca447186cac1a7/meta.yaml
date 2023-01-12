@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/637ae83d9f7a423dabca447186cac1a7/artifacts
+end_time: 1673534575995
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 637ae83d9f7a423dabca447186cac1a7
+run_name: dapper-horse-278
+run_uuid: 637ae83d9f7a423dabca447186cac1a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673534575781
+status: 3
+tags: []
+user_id: abdessamadbaahmed

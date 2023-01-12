@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abdessamadbaahmed/Desktop/livrable_mp_data/orchestration_server/mlruns/0/d5abae8580a9400bb0e0ca37ace34168/artifacts
+end_time: 1673533922389
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d5abae8580a9400bb0e0ca37ace34168
+run_name: painted-panda-428
+run_uuid: d5abae8580a9400bb0e0ca37ace34168
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673533922181
+status: 3
+tags: []
+user_id: abdessamadbaahmed
