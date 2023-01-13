@@ -1,0 +1,88 @@
+Starting...
+
+ ___ ___ ___ ___ ___ ___ _____    ___  ___ ___ ___  _  _
+| _ \ _ \ __| __| __/ __|_   _|  / _ \| _ \_ _/ _ \| \| |
+|  _/   / _|| _|| _| (__  | |   | (_) |   /| | (_) | .` |
+|_| |_|_\___|_| |___\___| |_|    \___/|_|_\___\___/|_|\_|
+
+Configure Prefect to communicate with the server with:
+
+    prefect config set PREFECT_API_URL=http://0.0.0.0:4200/api
+
+Check out the dashboard at http://0.0.0.0:4200
+
+
+
+INFO:     Started server process [8567]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:4200 (Press CTRL+C to quit)
+INFO:     46.193.65.52:65509 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     46.193.65.52:65509 - "GET /assets/index.435faa1e.js HTTP/1.1" 304 Not Modified
+INFO:     46.193.65.52:65510 - "GET /assets/index.0a49d3d8.css HTTP/1.1" 304 Not Modified
+INFO:     46.193.65.52:65509 - "GET /ui-settings HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65510 - "GET /assets/prefect-logo-mark-gradient.4f87a8b8.svg HTTP/1.1" 304 Not Modified
+INFO:     46.193.65.52:65510 - "POST /deployments/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65509 - "POST /flows/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:49226 - "GET /assets/prefect-icons.4f815e06.ttf?7gnc5t HTTP/1.1" 304 Not Modified
+INFO:     46.193.65.52:49229 - "POST /task_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:49227 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:49228 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65510 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65509 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:49226 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:49229 - "POST /flow_runs/filter HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65509 - "GET /ico/favicon-32x32.png HTTP/1.1" 304 Not Modified
+INFO:     46.193.65.52:49227 - "POST /flow_runs/filter HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65510 - "POST /saved_searches/filter HTTP/1.1" 200 OK
+INFO:     46.193.65.52:49228 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:49229 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65146 - "POST /flows/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65147 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65148 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65149 - "POST /deployments/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65146 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65150 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65151 - "POST /task_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65147 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52329 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     46.193.65.52:52329 - "GET /ui-settings HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52329 - "POST /deployments/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52330 - "POST /flows/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52391 - "POST /task_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52329 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52330 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52390 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52389 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52388 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52329 - "POST /flow_runs/filter HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52330 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52391 - "POST /flow_runs/filter HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52390 - "POST /saved_searches/filter HTTP/1.1" 200 OK
+INFO:     46.193.65.52:52329 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:54544 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:54539 - "POST /deployments/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:54543 - "POST /task_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:54541 - "POST /flows/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:54546 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:54542 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:54544 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:54539 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:54543 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65152 - "POST /flows/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65153 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65152 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65154 - "POST /deployments/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65155 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65157 - "POST /task_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65156 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:65153 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:60711 - "POST /flow_runs/history HTTP/1.1" 200 OK
+INFO:     46.193.65.52:60717 - "POST /deployments/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:60716 - "POST /flows/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:60713 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:60714 - "POST /task_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:60712 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:60711 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:60717 - "POST /flow_runs/count HTTP/1.1" 200 OK
+INFO:     46.193.65.52:60716 - "POST /flow_runs/history HTTP/1.1" 200 OK
