@@ -4,18 +4,18 @@ import os
 import mlflow
 import pandas as pd
 import xgboost as xgb
+from helpers import convert_numerical_columns_to_float
 from hyperopt import STATUS_OK, Trials, fmin, hp, tpe
 from hyperopt.pyll import scope
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
-from sklearn.model_selection import train_test_split
 from prefect import flow, task
 from prefect.task_runners import SequentialTaskRunner
-
-from helpers import convert_numerical_columns_to_float
+from sklearn.metrics import (accuracy_score, f1_score, precision_score,
+                             recall_score)
+from sklearn.model_selection import train_test_split
 
 data_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 
-@task
+
 def read_data(data_path, target_column):
     """
     this function reads the data
@@ -31,7 +31,7 @@ def read_data(data_path, target_column):
     target_column = df[target_column]
     return pd.concat([features, target_column], axis=1)
 
-@task
+
 def preprocessing_data(df):
     """
     this function preprocess the data
@@ -61,7 +61,7 @@ def preprocessing_data(df):
 
     return X_train, X_val, y_train, y_val
 
-@task
+
 def converting_to_xgb_matrix(X_train, X_val, y_train, y_val):
     """
     this function converts the data to xgb matrix
@@ -70,7 +70,7 @@ def converting_to_xgb_matrix(X_train, X_val, y_train, y_val):
     """
     return xgb.DMatrix(X_train, label=y_train), xgb.DMatrix(X_val, label=y_val)
 
-@task
+
 def train_model_hyper_param_tuning(train, valid, y_val):
     """
     this function trains the model using hyperparameter tuning
@@ -143,7 +143,7 @@ def train_model_hyper_param_tuning(train, valid, y_val):
 
     return best_result
 
-@task
+
 def train_model_with_best_parameter(train, valid, y_val, best_result):
     """
     this function trains the model with the best hyperparameters
@@ -189,31 +189,31 @@ def train_model_with_best_parameter(train, valid, y_val, best_result):
         # mlflow.log_artifact("mymodel", artifact_path="model")
         # mlflow.framework.log_model(model_object, artifact_path="model")
         mlflow.xgboost.log_model(booster, "model")
-        
-@flow(task_runner=SequentialTaskRunner())
+
+
 def main_workflow(data_relative_path):
     """ """
-    
+
     # set tracking uri
     mlflow.set_tracking_uri("http://20.224.70.229:5000/")
     # set experiment name
     mlflow.set_experiment("nba-investment-experiment")
-    
+
     # read data
     df = read_data(data_path + data_relative_path, "TARGET_5Yrs")
-    
+
     # define the features and target
     X_train, X_val, y_train, y_val = preprocessing_data(df).result()
-    
+
     # create the training and validation data for the model in the xgboost format
     train = xgb.DMatrix(X_train, label=y_train)
     valid = xgb.DMatrix(X_val, label=y_val)
-    
+
     # search for the best hyperparameters
     best_result = train_model_hyper_param_tuning(train, valid, y_val)
-    
+
     # train the xgboost model with the best hyperparameters
     train_model_with_best_parameter(train, valid, y_val, best_result)
 
 
-main_workflow("/data/nba_logreg_train.csv")
+# main_workflow("/data/nba_logreg_train.csv")

@@ -3,17 +3,11 @@ import time
 import plotly.express as px
 import streamlit as st
 import xgboost as xgb
-from helpers import (
-    feature_importance_logistic_regression,
-    feature_importance_tree_model,
-    pearson_corr,
-    read_dataset,
-)
+from helpers import (feature_importance_logistic_regression,
+                     feature_importance_tree_model, pearson_corr, read_dataset)
 from sklearn.ensemble import RandomForestClassifier
 
-df, features, target = read_dataset(
-    "/Users/abdessamadbaahmed/Desktop/livrable_mp_data/data/nba_logreg.csv"
-)
+df, features, target = read_dataset()
 
 tab1, tab2 = st.tabs(
     ["Logistic regression feature importance", "tree models feature importance"]

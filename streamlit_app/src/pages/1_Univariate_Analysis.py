@@ -3,9 +3,7 @@ import plotly.express as px
 import streamlit as st
 from helpers import read_dataset
 
-df, features, target = read_dataset(
-    "/Users/abdessamadbaahmed/Desktop/livrable_mp_data/data/nba_logreg.csv"
-)
+df, features, target = read_dataset()
 
 tab1, tab2 = st.tabs(["Summary Statistics", "Viz"])
 

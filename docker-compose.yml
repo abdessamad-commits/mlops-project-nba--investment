@@ -1,5 +1,22 @@
 version: '3'
 services:
+
+  minio:
+    image: minio/minio
+    environment:
+      MINIO_ACCESS_KEY: abdessamadbaahmed  
+      MINIO_SECRET_KEY: baahmedabdessamad
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio-data:/data
+    networks:
+      - mynetwork
+    command: server --console-address ":9001" /data
+    restart: always
+
+
   streamlit_app:
     build: streamlit_app/
     volumes:
@@ -22,7 +39,19 @@ services:
     #  - MLFLOW_TRACKING_URI=http://localhost:5000
     #command: ["mlflow", "server", "--host", "0.0.0.0"]
 
+  model_deployment_server:
+    build: model_deployment_server/
+    ports:
+      - 4100:4100
+    volumes:
+      - ./model_deployment_server:/model_deployment_server/
+
+    networks:
+      - mynetwork
+
 volumes:
+  # not important due to the fact that the volume is only modified by the mlflow server (one service)
   mlflow_server:
+  minio-data:
 networks:
   mynetwork:

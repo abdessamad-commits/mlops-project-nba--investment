@@ -1,13 +1,32 @@
 import numpy as np
 import pandas as pd
 import plotly.express as px
+from minio import Minio
 from scipy.stats import pearsonr
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import MinMaxScaler
 
 
-def read_dataset(file):
+def read_csv_from_minio(client, bucket_name, object_name):
+    """
+    The function read a csv file from a minio bucket
+    
+    :param client: the minio client
+    :param bucket_name: the name of the bucket
+    :param object_name: the name of the object
+    
+    :return: DataFrame
+    """
+    try:
+        # Get the object data
+        data = client.get_object(bucket_name, object_name)
+        return pd.read_csv(data)
+    except Exception as e:
+        print(e)
+
+
+def read_dataset():
     """
     Read the dataset from a csv file
 
@@ -15,16 +34,23 @@ def read_dataset(file):
 
     :return: a dataframe, the features and the target
     """
-    try:
-        df = pd.read_csv(file)
-        df.drop_duplicates(inplace=True)
-    except Exception:
-        df = pd.read_csv("/streamlit_app/src/data/nba_logreg.csv")
+
+    minio_client = Minio(
+        "minio:9000",
+        access_key="abdessamadbaahmed",
+        secret_key="baahmedabdessamad",
+        secure=False,
+    )
+
+    df = read_csv_from_minio(
+        minio_client, "nba-investment-data", "nba_logreg_preprocessed.csv"
+    )
+
+    # df.drop("TARGET_5Yrs", axis=1, inplace=True)
 
     df["3P%"].fillna(df["3P%"].mean(), inplace=True)
 
     df.columns = [
-        "Name",
         "Games Played",
         "Minutes Played",
         "Points Per Game",
@@ -47,7 +73,7 @@ def read_dataset(file):
         "Outcome Career Length",
     ]
 
-    features = df.drop(["Outcome Career Length", "Name"], axis=1)
+    features = df.drop(["Outcome Career Length"], axis=1)
     target = df["Outcome Career Length"]
     return df, features, target
 

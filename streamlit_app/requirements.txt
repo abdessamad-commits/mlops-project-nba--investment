@@ -7,3 +7,4 @@ altair
 statsmodels
 scikit-learn
 xgboost
+minio

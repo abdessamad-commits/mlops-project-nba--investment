@@ -1,0 +1,10 @@
+fastapi==0.89.1
+pydantic
+uvicorn
+mlflow
+pandas
+numpy 
+xgboost
+scikit-learn
+python-multipart
+minio
