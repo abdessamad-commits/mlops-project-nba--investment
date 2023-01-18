@@ -30,11 +30,41 @@ with tab1:
     # csv file upload
     st.title("NBA Player Investment Prediction")
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+    model_name = st.selectbox(
+        "What type of investors are you ?",
+        (
+            "Risk Taker",
+            "Cautious Investor",
+            "Balanced between Risk Taker and Cautious Investor",
+        ),
+        key=3,
+    )
+
+    if model_name == "Cautious Investor":
+        st.write(
+            "You are the Cautious type of investors so the model used for prediction maximizes precision"
+        )
+        model_name = "nba-investment-model-precision"
+
+    elif model_name == "Risk Taker":
+        st.write(
+            "You are the Risk Taker type of investors so the model used for prediction maximizes recall"
+        )
+        model_name = "nba-investment-model-recall"
+
+    else:
+        st.write(
+            "You are the Balanced type of investors so the model used for prediction maximizes f1-score"
+        )
+        model_name = "nba-investment-model-f1"
+
     if st.button("Predict", key=1) and uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         df.to_csv("uploaded_data_temp.csv", index=False)
 
-        url = "http://model_deployment_server:4100/batch_predict"
+        url = (
+            f"http://model_deployment_server:4100/batch_predict?model_name={model_name}"
+        )
 
         files = [
             (
@@ -57,7 +87,7 @@ with tab1:
             "The file with the predictions have been successfully stored on the bucket nba-investment-data with the following name: "
             + str(response["file_name"])
         )
-        
+
         st.dataframe(
             read_csv_from_minio(
                 minio_client, "nba-investment-data", response["file_name"]
@@ -88,16 +118,31 @@ with tab2:
     tov = st.number_input("tov", min_value=0)
 
     option_10 = st.selectbox(
-        "What type of investors are you ?", ("Risk Taker", "Cautious Investor")
+        "What type of investors are you ?",
+        (
+            "Risk Taker",
+            "Cautious Investor",
+            "Balanced between Risk Taker and Cautious Investor",
+        ),
     )
+
     if option_10 == "Cautious Investor":
         st.write(
-            "You are the Cautious type of investors so the model used for prediction maximises precision"
+            "You are the Cautious type of investors so the model used for prediction maximizes precision"
         )
+        model_name = "nba-investment-model-precision"
+
+    elif option_10 == "Risk Taker":
+        st.write(
+            "You are the Risk Taker type of investors so the model used for prediction maximizes recall"
+        )
+        model_name = "nba-investment-model-recall"
+
     else:
         st.write(
-            "You are the Risk Taker type of investors so the model used for prediction maximises recall"
+            "You are the Balanced type of investors so the model used for prediction maximizes f1-score"
         )
+        model_name = "nba-investment-model-f1"
 
     player = {
         "gp": gp,
@@ -119,6 +164,7 @@ with tab2:
         "stl": stl,
         "blk": blk,
         "tov": tov,
+        "model_name": model_name,
     }
 
     if st.button("Predict", key=2):

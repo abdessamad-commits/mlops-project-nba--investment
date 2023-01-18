@@ -11,11 +11,11 @@ from sklearn.preprocessing import MinMaxScaler
 def read_csv_from_minio(client, bucket_name, object_name):
     """
     The function read a csv file from a minio bucket
-    
+
     :param client: the minio client
     :param bucket_name: the name of the bucket
     :param object_name: the name of the object
-    
+
     :return: DataFrame
     """
     try:

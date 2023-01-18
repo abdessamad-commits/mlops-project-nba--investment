@@ -2,54 +2,34 @@ import logging
 import os
 import shutil
 import uuid
-from typing import Union
-
-import joblib
+from minio import Minio
 import mlflow
+import mlflow.pyfunc
 import numpy as np
 import pandas as pd
-import uvicorn
-from fastapi import FastAPI, File, HTTPException, Response, UploadFile
-from fastapi.responses import FileResponse
-from pydantic import BaseModel
+from .helpers import (
+    Player,
+    import_model_from_registry,
+    preprocessing_data,
+    save_to_elasticsearch,
+    upload_file_to_minio,
+)
+from fastapi import FastAPI, HTTPException, UploadFile
 
-from .helpers import *
+
+# Constants for status codes
+HTTP_200_OK = 200
+HTTP_400_BAD_REQUEST = 400
+
 
 # logging configuration
 logging.basicConfig(
     level=logging.INFO,
     filename="model_deployment.log",
-    filemode="w",
+    filemode="a",
+    datefmt="%Y-%m-%d %H:%M:%S",
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
-
-# Constants for status codes
-HTTP_200_OK = 200
-HTTP_400_BAD_REQUEST = 400
-HTTP_500_INTERNAL_SERVER_ERROR = 500
-
-
-# Create a class which inherits from the BaseModel class of pydantic and define the data types of the attributes
-class Player(BaseModel):
-    gp: Union[int, float]
-    min: Union[int, float]
-    pts: Union[int, float]
-    fgm: Union[int, float]
-    fga: Union[int, float]
-    fgpercent: Union[int, float]
-    treepmade: Union[int, float]
-    treepa: Union[int, float]
-    treeppercent: Union[int, float]
-    ftm: Union[int, float]
-    fta: Union[int, float]
-    ftpercent: Union[int, float]
-    oreb: Union[int, float]
-    dreb: Union[int, float]
-    reb: Union[int, float]
-    ast: Union[int, float]
-    stl: Union[int, float]
-    blk: Union[int, float]
-    tov: Union[int, float]
 
 
 # Create a new instance of the FastAPI class
@@ -67,26 +47,40 @@ def read_home():
 # Define a route for the prediction model
 @app.post("/online_predict")
 def online_predict(player: Player):
+    """
+    The function takes a player as input and returns a prediction
+
+    :param player: a player object
+
+    :return: a prediction of the model as a json object
+    """
     try:
+
         # set tracking uri
         mlflow.set_tracking_uri("http://20.224.70.229:5000/")
-
         # set experiment name
         mlflow.set_experiment("nba-investment-experiment")
 
         # Create a pandas dataframe and select the features the current model expects
         input_data = player.dict()
 
-        # Convert the values to float
-        values = [float(value) for value in list(input_data.values())]
+        #
+        print("this is the input data: ", input_data)
+
+        # Convert the values to float if they are numerical values else we keep them in their original format
+        values = [
+            float(val) if isinstance(val, (int, float)) else val
+            for val in input_data.values()
+        ]
 
         # check if all the values are non-negative
-        if any(val < 0 for val in values):
+        if any(val < 0 for val in values if isinstance(val, (int, float))):
             raise HTTPException(
-                status_code=HTTP_400_BAD_REQUEST, detail="Invalid entry"
+                status_code=HTTP_400_BAD_REQUEST,
+                detail="Invalid entry, all values must be non-negative",
             )
 
-        # Create a pandas dataframe and select the features the current model expects
+        # set the columns names for the entry data
         columns = [
             "GP",
             "MIN",
@@ -107,14 +101,18 @@ def online_predict(player: Player):
             "STL",
             "BLK",
             "TOV",
+            "model_name",
         ]
+
+        # Create a pandas dataframe from the input data
         input_data = pd.DataFrame([values], columns=columns)
+        # Get the model name to be used from the input data
+        model_name = input_data["model_name"].values[0]
+        # Drop the model name to be used from the input data
+        input_data.drop(columns=["model_name"], inplace=True)
 
-        # defining the model from mlfow registry
-        logged_model = "runs:/92ba1717068040aba1137975e81e4b81/model"
-
-        # Load model as a PyFuncModel.
-        loaded_model = mlflow.pyfunc.load_model(logged_model)
+        # Load model as a PyFuncModel using the model registry
+        loaded_model = import_model_from_registry(model_name, stage="Production")
 
         # Predict on a Pandas DataFrame.
         prediction = loaded_model.predict(input_data)
@@ -125,25 +123,48 @@ def online_predict(player: Player):
         # If the prediction is 1, the player is a good investment
         message = "Good investment" if prediction == 1 else "Bad investment"
 
+        # Convert the input data to a dictionary
+        input_data_dict = input_data.to_dict(orient="records")[0]
+
+        # Logging input data and model name
+        logging.info(
+            {
+                "input_data": input_data_dict,
+                "model_name": model_name,
+                "prediction": prediction,
+            }
+        )
+
+        # Save the prediction to elasticsearch
+        save_to_elasticsearch(input_data_dict, prediction)
+
         # Return the api response
-        return {"prediction": prediction, "status": HTTP_200_OK, "message": message}
+        return {
+            "prediction": prediction,
+            "status": HTTP_200_OK,
+            "message": message,
+            "model_name": model_name,
+        }
 
     except Exception as e:
+        # Log the error
         logging.exception(e)
         raise e
 
 
 @app.post("/batch_predict")
-def batch_predict(file: UploadFile):
-    """ 
-    the function takes a csv file as input and returns a csv file with the predictions as output
-    
+def batch_predict(file: UploadFile, model_name: str):
+    """
+    The function takes a csv file as input and returns a csv file with the predictions as output
+
     :param file: csv file
-    
+    :param model_name: name of the model to be used from the model registry
+
     :return: csv file with predictions
     """
 
     try:
+
         # initialize minio client
         minio_client = Minio(
             "minio:9000",
@@ -164,9 +185,11 @@ def batch_predict(file: UploadFile):
 
         # read the csv file
         df = pd.read_csv(file.filename)
+        print(df.head())
 
         # Preprocess the data
         df = preprocessing_data(df)
+        df.drop(columns=["TARGET_5Yrs"], inplace=True)
 
         # Check if all the values are non-negative
         if (df < 0).any().any() < 0:
@@ -174,11 +197,8 @@ def batch_predict(file: UploadFile):
                 status_code=HTTP_400_BAD_REQUEST, detail="Invalid entry"
             )
 
-        # defining the model from mlfow registry
-        logged_model = "runs:/92ba1717068040aba1137975e81e4b81/model"
-
         # Load model as a PyFuncModel.
-        loaded_model = mlflow.pyfunc.load_model(logged_model)
+        loaded_model = import_model_from_registry(model_name, stage="Production")
 
         # Predict on a Pandas DataFrame.
         predictions = loaded_model.predict(df)
@@ -197,7 +217,10 @@ def batch_predict(file: UploadFile):
 
         # upload the file to minios
         upload_file_to_minio(
-            minio_client, f"{str(file_name)}", "nba-investment-data", file_name,
+            minio_client,
+            f"{str(file_name)}",
+            "nba-investment-data",
+            file_name,
         )
 
         # delete the file from the local directory
@@ -205,8 +228,11 @@ def batch_predict(file: UploadFile):
         os.remove(file.filename)
 
         # Read the saved file and return it as a response
-        return {"file_name": file_name, "status": HTTP_200_OK}
+        return {"file_name": file_name, "status": HTTP_200_OK, "model_name": model_name}
 
     except Exception as e:
+        # delete the file from the local directory
+        os.remove(file_name)
+        os.remove(file.filename)
         logging.exception(e)
         raise e

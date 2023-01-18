@@ -16,7 +16,6 @@ services:
     command: server --console-address ":9001" /data
     restart: always
 
-
   streamlit_app:
     build: streamlit_app/
     volumes:
@@ -45,7 +44,32 @@ services:
       - 4100:4100
     volumes:
       - ./model_deployment_server:/model_deployment_server/
+    networks:
+      - mynetwork
 
+  Elasticsearch:
+    image: elasticsearch:7.16.2
+    container_name: elasticsearch
+    volumes:
+    - elastic_data:/usr/share/elasticsearch/data/
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      discovery.type: single-node    
+    ports:
+    - '9200:9200'
+    - '9300:9300'
+    networks:
+      - mynetwork
+
+  Kibana:
+    image: kibana:7.16.2
+    container_name: kibana
+    ports:
+    - '5601:5601'
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200  
+    depends_on:
+      - Elasticsearch  
     networks:
       - mynetwork
 
@@ -53,5 +77,7 @@ volumes:
   # not important due to the fact that the volume is only modified by the mlflow server (one service)
   mlflow_server:
   minio-data:
+  elastic_data: {}
+
 networks:
   mynetwork:

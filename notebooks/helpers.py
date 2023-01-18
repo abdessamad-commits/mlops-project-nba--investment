@@ -1,20 +1,19 @@
+import contextlib
 import os
 
 import mlflow
 import pandas as pd
-from minio import Minio
-from sklearn.metrics import (accuracy_score, f1_score, precision_score,
-                             recall_score)
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
 
 def view_files_in_bucket(client, bucket_name):
     """
     The function will list all the files in a bucket
-    
+
     :param client: The minio client
     :param bucket_name: The name of the bucket
-    
-    :return: None 
+
+    :return: None
     """
     objects = client.list_objects(bucket_name)
     for obj in objects:
@@ -24,10 +23,10 @@ def view_files_in_bucket(client, bucket_name):
 def list_objects_in_minio_bucket(client, bucket_name):
     """
     The function list all the objects in a minio bucket
-    
+
     :param client: the minio client
     :param bucket_name: the name of the bucket
-    
+
     :return: list of objects
     """
     try:
@@ -38,20 +37,23 @@ def list_objects_in_minio_bucket(client, bucket_name):
         print(e)
 
 
-def read_csv_from_minio(client, bucket_name, object_name):
+def read_data_from_minio(client, bucket_name, object_name):
     """
     The function read a csv file from a minio bucket
-    
+
     :param client: the minio client
     :param bucket_name: the name of the bucket
     :param object_name: the name of the object
-    
+
     :return: DataFrame
     """
     try:
         # Get the object data
-        data = client.get_object(bucket_name, object_name)
-        return pd.read_csv(data)
+        df = pd.read_csv(client.get_object(bucket_name, object_name))
+        df["TARGET_5Yrs"] = df["TARGET_5Yrs"].astype(int)
+        features = convert_numerical_columns_to_float(df.drop("TARGET_5Yrs", axis=1))
+        target_column = df["TARGET_5Yrs"]
+        return pd.concat([features, target_column], axis=1)
     except Exception as e:
         print(e)
 
@@ -59,12 +61,12 @@ def read_csv_from_minio(client, bucket_name, object_name):
 def upload_file_to_minio(client, file_path, bucket_name, object_name):
     """
     The function upload a file to a minio bucket
-    
+
     :param client: the minio client
     :param file_path: the path of the file to upload
     :param bucket_name: the name of the bucket
     :param object_name: the name of the object
-    
+
     :return: True if the file is uploaded successfully
     """
     file_size = os.stat(file_path).st_size
@@ -75,7 +77,7 @@ def upload_file_to_minio(client, file_path, bucket_name, object_name):
 
 def convert_numerical_columns_to_float(df):
     """
-    this function convert all numerical columns of a DataFrame to float
+    This function convert all numerical columns of a DataFrame to float
 
     :param df: DataFrame
 
@@ -86,9 +88,9 @@ def convert_numerical_columns_to_float(df):
     return df
 
 
-def read_data(data_path, target_column):
+def read_data(data_path):
     """
-    this function reads the data
+    This function reads the data
 
     :param data_path: path of the data
     :param target_column: target column of the data
@@ -97,22 +99,22 @@ def read_data(data_path, target_column):
     """
     df = pd.read_csv(data_path)
     df["TARGET_5Yrs"] = df["TARGET_5Yrs"].astype(int)
-    features = convert_numerical_columns_to_float(df.drop(target_column, axis=1))
-    target_column = df[target_column]
+    features = convert_numerical_columns_to_float(df.drop("TARGET_5Yrs", axis=1))
+    target_column = df["TARGET_5Yrs"]
     return pd.concat([features, target_column], axis=1)
 
 
 def preprocessing_data(df):
     """
-    this function preprocess the data
+    This function preprocess the data
+
     :param df: DataFrame
+
     :return: DataFrame
     """
-    try:
+    with contextlib.suppress(Exception):
         # dropping the name column
         df.drop(["Name"], axis=1, inplace=True)
-    except Exception:
-        pass
     # replacing the missing values with the mean of the column "3P%"
     df["3P%"].fillna(df["3P%"].mean(), inplace=True)
     return df
@@ -120,7 +122,7 @@ def preprocessing_data(df):
 
 def test_model_by_run_id(run_id, X_test, y_test):
     """
-    this function tests the model on the test data and prints the evaluation metrics in order to go to production
+    This function tests the model based on it's run id on the test data and prints the evaluation metrics 
 
     :param name: name of the model
     :param stage: stage of the model
@@ -151,15 +153,15 @@ def test_model_by_run_id(run_id, X_test, y_test):
         }
 
 
-def test_model_by_regsitry_version(model_name, model_version, X_test, y_test):
+def test_model_by_registry_version(model_name, model_version, X_test, y_test):
     """
-    this function tests the model on the test data and prints the evaluation metrics in order to go to production
-    
+    This function tests the models that have been promoted to the mlflow registry on the test data and prints the evaluation metrics in order to go to productionn,the model version is the version of the model in the registry
+
     :param model_name: name of the model
     :param model_version: version of the model
     :param X_test: test features
     :param y_test: test target
-    
+
     :return: dictionary with the evaluation metrics
     """
     with mlflow.start_run():
@@ -188,14 +190,15 @@ def test_model_by_regsitry_version(model_name, model_version, X_test, y_test):
         }
 
 
-def test_model_by_regsitry_all_versions(model_name, X_test, y_test, sort_by="f1"):
+def test_model_by_registry_all_versions(model_name, X_test, y_test, sort_by="f1"):
     """
-    the function tests all the versions of the model and returns a DataFrame with the evaluation metrics
-    
+    The function tests all the versions of the model present in the mflow registry and returns a DataFrame with the evaluation metrics
+
     :param model_name: name of the model
     :param X_test: test features
     :param y_test: test target
-    
+    :param sort_by: column to sort the DataFrame by
+
     :return: DataFrame with the evaluation metrics
     """
     i = 0
@@ -203,7 +206,7 @@ def test_model_by_regsitry_all_versions(model_name, X_test, y_test, sort_by="f1"
     while True:
         try:
             res.append(
-                test_model_by_regsitry_version(model_name, i + 1, X_test, y_test)
+                test_model_by_registry_version(model_name, i + 1, X_test, y_test)
             )
         except Exception:
             break

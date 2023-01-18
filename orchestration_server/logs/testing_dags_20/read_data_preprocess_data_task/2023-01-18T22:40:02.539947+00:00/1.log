@@ -1,0 +1,23 @@
+[2023-01-18 22:40:13,718] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: testing_dags_20.read_data_preprocess_data_task 2023-01-18T22:40:02.539947+00:00 [queued]>
+[2023-01-18 22:40:13,782] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: testing_dags_20.read_data_preprocess_data_task 2023-01-18T22:40:02.539947+00:00 [queued]>
+[2023-01-18 22:40:13,785] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18 22:40:13,786] {taskinstance.py:1043} INFO - Starting attempt 1 of 3
+[2023-01-18 22:40:13,788] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18 22:40:13,821] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): read_data_preprocess_data_task> on 2023-01-18T22:40:02.539947+00:00
+[2023-01-18 22:40:13,839] {standard_task_runner.py:52} INFO - Started process 576 to run task
+[2023-01-18 22:40:13,856] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'testing_dags_20', 'read_data_preprocess_data_task', '2023-01-18T22:40:02.539947+00:00', '--job-id', '2', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/modeling_dag.py', '--cfg-path', '/tmp/tmpgs4asms1', '--error-file', '/tmp/tmpl67a659o']
+[2023-01-18 22:40:13,868] {standard_task_runner.py:77} INFO - Job 2: Subtask read_data_preprocess_data_task
+[2023-01-18 22:40:13,995] {logging_mixin.py:104} INFO - Running <TaskInstance: testing_dags_20.read_data_preprocess_data_task 2023-01-18T22:40:02.539947+00:00 [running]> on host cec10ef38322
+[2023-01-18 22:40:14,172] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=abdessamad
+AIRFLOW_CTX_DAG_ID=testing_dags_20
+AIRFLOW_CTX_TASK_ID=read_data_preprocess_data_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-18T22:40:02.539947+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-18T22:40:02.539947+00:00
+[2023-01-18 22:40:15,431] {logging_mixin.py:104} INFO - these are the actual files in the local storage['dags', 'logs', 'airflow.cfg', 'nba_logreg_processed.csv', 'webserver_config.py', 'unittests.cfg', 'plugins']
+[2023-01-18 22:40:17,890] {python.py:118} INFO - Done. Returned value was: None
+[2023-01-18 22:40:17,959] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=testing_dags_20, task_id=read_data_preprocess_data_task, execution_date=20230118T224002, start_date=20230118T224013, end_date=20230118T224017
+[2023-01-18 22:40:18,057] {taskinstance.py:1220} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-18 22:40:18,151] {local_task_job.py:146} INFO - Task exited with return code 0

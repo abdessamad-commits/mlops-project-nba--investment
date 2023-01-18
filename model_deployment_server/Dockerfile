@@ -10,6 +10,8 @@ COPY ./requirements.txt /model_deployment_server/requirements.txt
 # 
 RUN pip install --no-cache-dir --upgrade -r /model_deployment_server/requirements.txt
 
+RUN pip install evidently
+
 # 
 COPY ./src /model_deployment_server/src
 
