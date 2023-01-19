@@ -3,7 +3,7 @@ import random
 import requests
 
 # The URL of the deployed model
-URL = "http://0.0.0.0:4100/online_predict"
+URL = "http://20.224.70.229:4100/online_predict"
 
 # The headers of the request, in this case it's setting the accept and Content-Type
 headers = {"accept": "application/json", "Content-Type": "application/json"}
