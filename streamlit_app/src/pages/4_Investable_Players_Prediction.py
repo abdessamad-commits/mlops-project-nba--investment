@@ -16,9 +16,9 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
-tab1, tab2 = st.tabs(["Batch Prediction", "Online Prediction"])
+tab1, tab2 = st.tabs(["Online Prediction", "Batch Prediction"])
 
-with tab1:
+with tab2:
 
     minio_client = Minio(
         "minio:9000",
@@ -95,7 +95,7 @@ with tab1:
         )
 
 
-with tab2:
+with tab1:
     st.title("NBA Player Investment Prediction")
     gp = st.number_input("GP", min_value=0)
     minn = st.number_input("MIN", min_value=0)
