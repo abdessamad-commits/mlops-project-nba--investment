@@ -1,0 +1,111 @@
+[2023-01-19 11:10:43,521] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: ml-workflow.train_model_with_best_parameter_task 2023-01-19T11:09:08.613522+00:00 [queued]>
+[2023-01-19 11:10:43,531] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: ml-workflow.train_model_with_best_parameter_task 2023-01-19T11:09:08.613522+00:00 [queued]>
+[2023-01-19 11:10:43,531] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-19 11:10:43,531] {taskinstance.py:1043} INFO - Starting attempt 1 of 3
+[2023-01-19 11:10:43,531] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-19 11:10:43,544] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): train_model_with_best_parameter_task> on 2023-01-19T11:09:08.613522+00:00
+[2023-01-19 11:10:43,552] {standard_task_runner.py:52} INFO - Started process 13280 to run task
+[2023-01-19 11:10:43,557] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'ml-workflow', 'train_model_with_best_parameter_task', '2023-01-19T11:09:08.613522+00:00', '--job-id', '20', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/modeling_dag.py', '--cfg-path', '/tmp/tmpx6aatab2', '--error-file', '/tmp/tmpod_zfk9j']
+[2023-01-19 11:10:43,561] {standard_task_runner.py:77} INFO - Job 20: Subtask train_model_with_best_parameter_task
+[2023-01-19 11:10:43,602] {logging_mixin.py:104} INFO - Running <TaskInstance: ml-workflow.train_model_with_best_parameter_task 2023-01-19T11:09:08.613522+00:00 [running]> on host 3f7900fce849
+[2023-01-19 11:10:43,640] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=abdessamad
+AIRFLOW_CTX_DAG_ID=ml-workflow
+AIRFLOW_CTX_TASK_ID=train_model_with_best_parameter_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-19T11:09:08.613522+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-19T11:09:08.613522+00:00
+[2023-01-19 11:10:43,808] {logging_mixin.py:104} WARNING - 2023/01/19 11:10:43 WARNING mlflow.tracking.context.git_context: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh()
+
+All git commands will error until this is rectified.
+
+This initial warning can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|none|n|0: for no warning or exception
+    - warn|w|warning|1: for a printed warning
+    - error|e|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2023-01-19 11:10:43,808] {logging_mixin.py:104} WARNING - 
+[2023-01-19 11:10:43,856] {logging_mixin.py:104} INFO - this is the best hyperparameters:  {'learning_rate': 0.13591108924671055, 'max_depth': 53, 'min_child_weight': 1.8407273758876173, 'reg_alpha': 0.06822594452513772, 'reg_lambda': 0.21990334410153012, 'objective': 'binary:logistic', 'seed': 42}
+[2023-01-19 11:10:43,946] {logging_mixin.py:104} INFO - [11:10:43] WARNING: ../src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+[2023-01-19 11:10:43,946] {logging_mixin.py:104} INFO - [0]	validation-logloss:0.66799
+[2023-01-19 11:10:43,953] {logging_mixin.py:104} INFO - [1]	validation-logloss:0.65545
+[2023-01-19 11:10:43,960] {logging_mixin.py:104} INFO - [2]	validation-logloss:0.63409
+[2023-01-19 11:10:43,967] {logging_mixin.py:104} INFO - [3]	validation-logloss:0.62511
+[2023-01-19 11:10:43,974] {logging_mixin.py:104} INFO - [4]	validation-logloss:0.61492
+[2023-01-19 11:10:43,982] {logging_mixin.py:104} INFO - [5]	validation-logloss:0.60355
+[2023-01-19 11:10:43,989] {logging_mixin.py:104} INFO - [6]	validation-logloss:0.60416
+[2023-01-19 11:10:43,995] {logging_mixin.py:104} INFO - [7]	validation-logloss:0.60436
+[2023-01-19 11:10:44,002] {logging_mixin.py:104} INFO - [8]	validation-logloss:0.60530
+[2023-01-19 11:10:44,008] {logging_mixin.py:104} INFO - [9]	validation-logloss:0.60330
+[2023-01-19 11:10:44,017] {logging_mixin.py:104} INFO - [10]	validation-logloss:0.60260
+[2023-01-19 11:10:44,023] {logging_mixin.py:104} INFO - [11]	validation-logloss:0.60399
+[2023-01-19 11:10:44,030] {logging_mixin.py:104} INFO - [12]	validation-logloss:0.60514
+[2023-01-19 11:10:44,036] {logging_mixin.py:104} INFO - [13]	validation-logloss:0.60438
+[2023-01-19 11:10:44,042] {logging_mixin.py:104} INFO - [14]	validation-logloss:0.60538
+[2023-01-19 11:10:44,049] {logging_mixin.py:104} INFO - [15]	validation-logloss:0.60607
+[2023-01-19 11:10:44,055] {logging_mixin.py:104} INFO - [16]	validation-logloss:0.60440
+[2023-01-19 11:10:44,062] {logging_mixin.py:104} INFO - [17]	validation-logloss:0.60547
+[2023-01-19 11:10:44,069] {logging_mixin.py:104} INFO - [18]	validation-logloss:0.61125
+[2023-01-19 11:10:44,075] {logging_mixin.py:104} INFO - [19]	validation-logloss:0.61664
+[2023-01-19 11:10:44,082] {logging_mixin.py:104} INFO - [20]	validation-logloss:0.61607
+[2023-01-19 11:10:44,089] {logging_mixin.py:104} INFO - [21]	validation-logloss:0.61354
+[2023-01-19 11:10:44,095] {logging_mixin.py:104} INFO - [22]	validation-logloss:0.61682
+[2023-01-19 11:10:44,103] {logging_mixin.py:104} INFO - [23]	validation-logloss:0.61703
+[2023-01-19 11:10:44,109] {logging_mixin.py:104} INFO - [24]	validation-logloss:0.62075
+[2023-01-19 11:10:44,115] {logging_mixin.py:104} INFO - [25]	validation-logloss:0.62116
+[2023-01-19 11:10:44,122] {logging_mixin.py:104} INFO - [26]	validation-logloss:0.62181
+[2023-01-19 11:10:44,129] {logging_mixin.py:104} INFO - [27]	validation-logloss:0.62114
+[2023-01-19 11:10:44,135] {logging_mixin.py:104} INFO - [28]	validation-logloss:0.62205
+[2023-01-19 11:10:44,142] {logging_mixin.py:104} INFO - [29]	validation-logloss:0.62830
+[2023-01-19 11:10:44,149] {logging_mixin.py:104} INFO - [30]	validation-logloss:0.62857
+[2023-01-19 11:10:44,155] {logging_mixin.py:104} INFO - [31]	validation-logloss:0.62513
+[2023-01-19 11:10:44,161] {logging_mixin.py:104} INFO - [32]	validation-logloss:0.62691
+[2023-01-19 11:10:44,168] {logging_mixin.py:104} INFO - [33]	validation-logloss:0.62861
+[2023-01-19 11:10:44,175] {logging_mixin.py:104} INFO - [34]	validation-logloss:0.62591
+[2023-01-19 11:10:44,181] {logging_mixin.py:104} INFO - [35]	validation-logloss:0.62348
+[2023-01-19 11:10:44,187] {logging_mixin.py:104} INFO - [36]	validation-logloss:0.62362
+[2023-01-19 11:10:44,193] {logging_mixin.py:104} INFO - [37]	validation-logloss:0.62372
+[2023-01-19 11:10:44,198] {logging_mixin.py:104} INFO - [38]	validation-logloss:0.62685
+[2023-01-19 11:10:44,204] {logging_mixin.py:104} INFO - [39]	validation-logloss:0.62828
+[2023-01-19 11:10:44,210] {logging_mixin.py:104} INFO - [40]	validation-logloss:0.63150
+[2023-01-19 11:10:44,216] {logging_mixin.py:104} INFO - [41]	validation-logloss:0.63513
+[2023-01-19 11:10:44,222] {logging_mixin.py:104} INFO - [42]	validation-logloss:0.63511
+[2023-01-19 11:10:44,228] {logging_mixin.py:104} INFO - [43]	validation-logloss:0.63374
+[2023-01-19 11:10:44,233] {logging_mixin.py:104} INFO - [44]	validation-logloss:0.63614
+[2023-01-19 11:10:44,239] {logging_mixin.py:104} INFO - [45]	validation-logloss:0.63576
+[2023-01-19 11:10:44,258] {logging_mixin.py:104} INFO - [46]	validation-logloss:0.63643
+[2023-01-19 11:10:44,272] {logging_mixin.py:104} INFO - [47]	validation-logloss:0.63932
+[2023-01-19 11:10:44,312] {logging_mixin.py:104} INFO - [48]	validation-logloss:0.63916
+[2023-01-19 11:10:44,549] {logging_mixin.py:104} INFO - [49]	validation-logloss:0.63853
+[2023-01-19 11:10:44,596] {logging_mixin.py:104} INFO - [50]	validation-logloss:0.63994
+[2023-01-19 11:10:44,667] {logging_mixin.py:104} INFO - [51]	validation-logloss:0.63987
+[2023-01-19 11:10:44,753] {logging_mixin.py:104} INFO - [52]	validation-logloss:0.63889
+[2023-01-19 11:10:44,793] {logging_mixin.py:104} INFO - [53]	validation-logloss:0.63941
+[2023-01-19 11:10:44,810] {logging_mixin.py:104} INFO - [54]	validation-logloss:0.64114
+[2023-01-19 11:10:44,817] {logging_mixin.py:104} INFO - [55]	validation-logloss:0.64093
+[2023-01-19 11:10:44,824] {logging_mixin.py:104} INFO - [56]	validation-logloss:0.64097
+[2023-01-19 11:10:44,829] {logging_mixin.py:104} INFO - [57]	validation-logloss:0.64392
+[2023-01-19 11:10:44,835] {logging_mixin.py:104} INFO - [58]	validation-logloss:0.64758
+[2023-01-19 11:10:44,844] {logging_mixin.py:104} INFO - [59]	validation-logloss:0.64975
+[2023-01-19 11:10:44,850] {logging_mixin.py:104} INFO - [60]	validation-logloss:0.64998
+[2023-01-19 11:10:44,890] {logging_mixin.py:104} INFO - this is the y_pred:  [1. 0. 0. 1. 0. 0. 1. 1. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0. 1. 1. 0.
+ 1. 1. 1. 0. 1. 0. 1. 1. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+ 1. 1. 0. 1. 0. 1. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1.
+ 1. 0. 1. 0. 1. 1. 1. 0. 0. 1. 1. 0. 1. 1. 0. 0. 0. 1. 0. 0. 1. 1. 1. 1.
+ 0. 1. 0. 1. 1. 0. 1. 1. 0. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 0. 0. 0. 1. 0.
+ 1. 1. 0. 0. 0. 1. 1. 1. 1. 0. 0. 1. 0. 0. 1. 0. 1. 1. 1. 1. 1. 1. 1. 0.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 1.
+ 1. 1. 0. 0. 1. 1. 0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 1. 1. 1. 0. 1. 0. 0. 0.
+ 1. 1. 1. 1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 1. 0. 1. 0. 0. 0. 1. 1. 1.]
+[2023-01-19 11:10:47,447] {python.py:118} INFO - Done. Returned value was: None
+[2023-01-19 11:10:47,460] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=ml-workflow, task_id=train_model_with_best_parameter_task, execution_date=20230119T110908, start_date=20230119T111043, end_date=20230119T111047
+[2023-01-19 11:10:47,495] {taskinstance.py:1220} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-19 11:10:47,542] {local_task_job.py:146} INFO - Task exited with return code 0

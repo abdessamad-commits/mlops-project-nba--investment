@@ -1,0 +1,125 @@
+[2023-01-18 22:45:19,214] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: testing_dags_20.train_model_with_best_parameter_task 2023-01-18T22:40:02.539947+00:00 [queued]>
+[2023-01-18 22:45:19,270] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: testing_dags_20.train_model_with_best_parameter_task 2023-01-18T22:40:02.539947+00:00 [queued]>
+[2023-01-18 22:45:19,272] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18 22:45:19,274] {taskinstance.py:1043} INFO - Starting attempt 1 of 3
+[2023-01-18 22:45:19,275] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18 22:45:19,303] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): train_model_with_best_parameter_task> on 2023-01-18T22:40:02.539947+00:00
+[2023-01-18 22:45:19,327] {standard_task_runner.py:52} INFO - Started process 706 to run task
+[2023-01-18 22:45:19,338] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'testing_dags_20', 'train_model_with_best_parameter_task', '2023-01-18T22:40:02.539947+00:00', '--job-id', '4', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/modeling_dag.py', '--cfg-path', '/tmp/tmp3v83rci5', '--error-file', '/tmp/tmpnqpbnkd3']
+[2023-01-18 22:45:19,349] {standard_task_runner.py:77} INFO - Job 4: Subtask train_model_with_best_parameter_task
+[2023-01-18 22:45:19,454] {logging_mixin.py:104} INFO - Running <TaskInstance: testing_dags_20.train_model_with_best_parameter_task 2023-01-18T22:40:02.539947+00:00 [running]> on host cec10ef38322
+[2023-01-18 22:45:19,554] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=abdessamad
+AIRFLOW_CTX_DAG_ID=testing_dags_20
+AIRFLOW_CTX_TASK_ID=train_model_with_best_parameter_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-18T22:40:02.539947+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-18T22:40:02.539947+00:00
+[2023-01-18 22:45:20,864] {logging_mixin.py:104} WARNING - 2023/01/18 22:45:20 WARNING mlflow.tracking.context.git_context: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh()
+
+All git commands will error until this is rectified.
+
+This initial warning can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|none|n|0: for no warning or exception
+    - warn|w|warning|1: for a printed warning
+    - error|e|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2023-01-18 22:45:20,867] {logging_mixin.py:104} WARNING - 
+[2023-01-18 22:45:21,023] {logging_mixin.py:104} INFO - this is the best hyperparameters:  {'learning_rate': 0.12637746300191657, 'max_depth': 56, 'min_child_weight': 3.8827141857422824, 'reg_alpha': 0.20820796101217814, 'reg_lambda': 0.020470365854229025, 'objective': 'binary:logistic', 'seed': 42}
+[2023-01-18 22:45:21,532] {logging_mixin.py:104} INFO - [22:45:21] WARNING: ../src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+[2023-01-18 22:45:21,548] {logging_mixin.py:104} INFO - [0]	validation-logloss:0.67181
+[2023-01-18 22:45:21,571] {logging_mixin.py:104} INFO - [1]	validation-logloss:0.65789
+[2023-01-18 22:45:21,594] {logging_mixin.py:104} INFO - [2]	validation-logloss:0.64116
+[2023-01-18 22:45:21,624] {logging_mixin.py:104} INFO - [3]	validation-logloss:0.63395
+[2023-01-18 22:45:21,650] {logging_mixin.py:104} INFO - [4]	validation-logloss:0.62486
+[2023-01-18 22:45:21,674] {logging_mixin.py:104} INFO - [5]	validation-logloss:0.61692
+[2023-01-18 22:45:21,698] {logging_mixin.py:104} INFO - [6]	validation-logloss:0.61473
+[2023-01-18 22:45:21,723] {logging_mixin.py:104} INFO - [7]	validation-logloss:0.60886
+[2023-01-18 22:45:21,748] {logging_mixin.py:104} INFO - [8]	validation-logloss:0.60470
+[2023-01-18 22:45:21,772] {logging_mixin.py:104} INFO - [9]	validation-logloss:0.60389
+[2023-01-18 22:45:21,796] {logging_mixin.py:104} INFO - [10]	validation-logloss:0.59866
+[2023-01-18 22:45:21,820] {logging_mixin.py:104} INFO - [11]	validation-logloss:0.59945
+[2023-01-18 22:45:21,874] {logging_mixin.py:104} INFO - [12]	validation-logloss:0.59944
+[2023-01-18 22:45:21,920] {logging_mixin.py:104} INFO - [13]	validation-logloss:0.59670
+[2023-01-18 22:45:22,009] {logging_mixin.py:104} INFO - [14]	validation-logloss:0.60164
+[2023-01-18 22:45:22,113] {logging_mixin.py:104} INFO - [15]	validation-logloss:0.59959
+[2023-01-18 22:45:22,178] {logging_mixin.py:104} INFO - [16]	validation-logloss:0.60098
+[2023-01-18 22:45:22,254] {logging_mixin.py:104} INFO - [17]	validation-logloss:0.59925
+[2023-01-18 22:45:22,304] {logging_mixin.py:104} INFO - [18]	validation-logloss:0.59920
+[2023-01-18 22:45:22,337] {logging_mixin.py:104} INFO - [19]	validation-logloss:0.60133
+[2023-01-18 22:45:22,561] {logging_mixin.py:104} INFO - [20]	validation-logloss:0.60002
+[2023-01-18 22:45:23,085] {logging_mixin.py:104} INFO - [21]	validation-logloss:0.60238
+[2023-01-18 22:45:23,122] {logging_mixin.py:104} INFO - [22]	validation-logloss:0.60386
+[2023-01-18 22:45:23,169] {logging_mixin.py:104} INFO - [23]	validation-logloss:0.60096
+[2023-01-18 22:45:23,415] {logging_mixin.py:104} INFO - [24]	validation-logloss:0.59667
+[2023-01-18 22:45:23,447] {logging_mixin.py:104} INFO - [25]	validation-logloss:0.59777
+[2023-01-18 22:45:23,521] {logging_mixin.py:104} INFO - [26]	validation-logloss:0.60157
+[2023-01-18 22:45:23,788] {logging_mixin.py:104} INFO - [27]	validation-logloss:0.60198
+[2023-01-18 22:45:23,818] {logging_mixin.py:104} INFO - [28]	validation-logloss:0.60529
+[2023-01-18 22:45:23,879] {logging_mixin.py:104} INFO - [29]	validation-logloss:0.60850
+[2023-01-18 22:45:23,921] {logging_mixin.py:104} INFO - [30]	validation-logloss:0.61063
+[2023-01-18 22:45:23,956] {logging_mixin.py:104} INFO - [31]	validation-logloss:0.60894
+[2023-01-18 22:45:24,002] {logging_mixin.py:104} INFO - [32]	validation-logloss:0.61163
+[2023-01-18 22:45:24,054] {logging_mixin.py:104} INFO - [33]	validation-logloss:0.61100
+[2023-01-18 22:45:24,268] {logging_mixin.py:104} INFO - [34]	validation-logloss:0.61268
+[2023-01-18 22:45:24,371] {logging_mixin.py:104} INFO - [35]	validation-logloss:0.61436
+[2023-01-18 22:45:24,570] {logging_mixin.py:104} INFO - [36]	validation-logloss:0.61178
+[2023-01-18 22:45:24,649] {logging_mixin.py:104} INFO - [37]	validation-logloss:0.61172
+[2023-01-18 22:45:24,698] {logging_mixin.py:104} INFO - [38]	validation-logloss:0.60921
+[2023-01-18 22:45:25,047] {logging_mixin.py:104} INFO - [39]	validation-logloss:0.61096
+[2023-01-18 22:45:25,132] {logging_mixin.py:104} INFO - [40]	validation-logloss:0.61113
+[2023-01-18 22:45:25,479] {logging_mixin.py:104} INFO - [41]	validation-logloss:0.61333
+[2023-01-18 22:45:26,194] {logging_mixin.py:104} INFO - [42]	validation-logloss:0.61354
+[2023-01-18 22:45:26,250] {logging_mixin.py:104} INFO - [43]	validation-logloss:0.61486
+[2023-01-18 22:45:26,284] {logging_mixin.py:104} INFO - [44]	validation-logloss:0.61575
+[2023-01-18 22:45:26,580] {logging_mixin.py:104} INFO - [45]	validation-logloss:0.61643
+[2023-01-18 22:45:26,787] {logging_mixin.py:104} INFO - [46]	validation-logloss:0.61671
+[2023-01-18 22:45:26,968] {logging_mixin.py:104} INFO - [47]	validation-logloss:0.61518
+[2023-01-18 22:45:27,075] {logging_mixin.py:104} INFO - [48]	validation-logloss:0.61727
+[2023-01-18 22:45:27,192] {logging_mixin.py:104} INFO - [49]	validation-logloss:0.61293
+[2023-01-18 22:45:27,252] {logging_mixin.py:104} INFO - [50]	validation-logloss:0.61358
+[2023-01-18 22:45:27,315] {logging_mixin.py:104} INFO - [51]	validation-logloss:0.61226
+[2023-01-18 22:45:27,379] {logging_mixin.py:104} INFO - [52]	validation-logloss:0.61582
+[2023-01-18 22:45:27,412] {logging_mixin.py:104} INFO - [53]	validation-logloss:0.61888
+[2023-01-18 22:45:27,454] {logging_mixin.py:104} INFO - [54]	validation-logloss:0.61920
+[2023-01-18 22:45:27,497] {logging_mixin.py:104} INFO - [55]	validation-logloss:0.61852
+[2023-01-18 22:45:27,537] {logging_mixin.py:104} INFO - [56]	validation-logloss:0.61929
+[2023-01-18 22:45:27,729] {logging_mixin.py:104} INFO - [57]	validation-logloss:0.62012
+[2023-01-18 22:45:27,780] {logging_mixin.py:104} INFO - [58]	validation-logloss:0.62001
+[2023-01-18 22:45:27,826] {logging_mixin.py:104} INFO - [59]	validation-logloss:0.62306
+[2023-01-18 22:45:27,859] {logging_mixin.py:104} INFO - [60]	validation-logloss:0.62550
+[2023-01-18 22:45:27,910] {logging_mixin.py:104} INFO - [61]	validation-logloss:0.62688
+[2023-01-18 22:45:27,946] {logging_mixin.py:104} INFO - [62]	validation-logloss:0.62940
+[2023-01-18 22:45:27,994] {logging_mixin.py:104} INFO - [63]	validation-logloss:0.62857
+[2023-01-18 22:45:28,038] {logging_mixin.py:104} INFO - [64]	validation-logloss:0.63038
+[2023-01-18 22:45:28,086] {logging_mixin.py:104} INFO - [65]	validation-logloss:0.63103
+[2023-01-18 22:45:28,132] {logging_mixin.py:104} INFO - [66]	validation-logloss:0.63057
+[2023-01-18 22:45:28,174] {logging_mixin.py:104} INFO - [67]	validation-logloss:0.62928
+[2023-01-18 22:45:28,205] {logging_mixin.py:104} INFO - [68]	validation-logloss:0.62941
+[2023-01-18 22:45:28,521] {logging_mixin.py:104} INFO - [69]	validation-logloss:0.63194
+[2023-01-18 22:45:28,567] {logging_mixin.py:104} INFO - [70]	validation-logloss:0.63262
+[2023-01-18 22:45:28,654] {logging_mixin.py:104} INFO - [71]	validation-logloss:0.63481
+[2023-01-18 22:45:28,709] {logging_mixin.py:104} INFO - [72]	validation-logloss:0.63423
+[2023-01-18 22:45:28,747] {logging_mixin.py:104} INFO - [73]	validation-logloss:0.63593
+[2023-01-18 22:45:28,797] {logging_mixin.py:104} INFO - [74]	validation-logloss:0.63657
+[2023-01-18 22:45:29,068] {logging_mixin.py:104} INFO - this is the y_pred:  [1. 1. 0. 1. 0. 0. 1. 1. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 1. 0. 0. 1. 0. 0.
+ 1. 1. 1. 1. 1. 0. 1. 1. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+ 1. 1. 0. 1. 0. 1. 0. 0. 0. 0. 1. 0. 1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 1. 1.
+ 1. 0. 1. 0. 1. 1. 1. 1. 0. 1. 1. 0. 1. 1. 0. 0. 0. 1. 0. 0. 1. 1. 1. 1.
+ 0. 1. 0. 1. 1. 0. 1. 1. 0. 1. 0. 1. 1. 1. 0. 1. 1. 1. 1. 0. 0. 0. 1. 0.
+ 1. 1. 0. 1. 0. 1. 1. 1. 1. 1. 0. 1. 0. 1. 0. 0. 1. 1. 1. 1. 1. 1. 0. 0.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 1.
+ 1. 1. 0. 0. 1. 1. 0. 1. 1. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 0. 1. 0. 0. 0.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 0. 0. 0. 1. 0. 1. 0. 1. 0. 1. 1. 1.]
+[2023-01-18 22:45:49,028] {python.py:118} INFO - Done. Returned value was: None
+[2023-01-18 22:45:49,113] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=testing_dags_20, task_id=train_model_with_best_parameter_task, execution_date=20230118T224002, start_date=20230118T224519, end_date=20230118T224549
+[2023-01-18 22:45:49,219] {taskinstance.py:1220} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-18 22:45:49,403] {local_task_job.py:146} INFO - Task exited with return code 0

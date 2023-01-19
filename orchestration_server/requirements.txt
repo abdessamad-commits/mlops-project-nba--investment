@@ -1,0 +1,7 @@
+pandas
+mlflow
+numpy 
+xgboost
+scikit-learn
+minio
+hyperopt
