@@ -12,7 +12,7 @@ from minio import Minio
 logging.basicConfig(
     level=logging.INFO,
     filename="streamlit.log",
-    filemode="w",
+    filemode="a",
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
@@ -97,25 +97,25 @@ with tab1:
 
 with tab2:
     st.title("NBA Player Investment Prediction")
-    gp = st.number_input("gp", min_value=0)
-    minn = st.number_input("min", min_value=0)
-    pts = st.number_input("pts", min_value=0)
-    fgm = st.number_input("fgm", min_value=0)
-    fga = st.number_input("fga", min_value=0)
-    fgpercent = st.number_input("fgpercent", min_value=0)
-    treepmade = st.number_input("treepmade", min_value=0)
-    treepa = st.number_input("treepa", min_value=0)
-    treeppercent = st.number_input("treeppercent", min_value=0)
-    ftm = st.number_input("ftm", min_value=0)
-    fta = st.number_input("fta", min_value=0)
-    ftpercent = st.number_input("ftpercent", min_value=0)
-    oreb = st.number_input("oreb", min_value=0)
-    dreb = st.number_input("dreb", min_value=0)
-    reb = st.number_input("reb", min_value=0)
-    ast = st.number_input("ast", min_value=0)
-    stl = st.number_input("stl", min_value=0)
-    blk = st.number_input("blk", min_value=0)
-    tov = st.number_input("tov", min_value=0)
+    gp = st.number_input("GP", min_value=0)
+    minn = st.number_input("MIN", min_value=0)
+    pts = st.number_input("PTS", min_value=0)
+    fgm = st.number_input("FGM", min_value=0)
+    fga = st.number_input("FGA", min_value=0)
+    fgpercent = st.number_input("FG%", min_value=0)
+    treepmade = st.number_input("3P Made", min_value=0)
+    treepa = st.number_input("3PA", min_value=0)
+    treeppercent = st.number_input("3P%", min_value=0)
+    ftm = st.number_input("FTM", min_value=0)
+    fta = st.number_input("FTA", min_value=0)
+    ftpercent = st.number_input("FT%", min_value=0)
+    oreb = st.number_input("OREB", min_value=0)
+    dreb = st.number_input("DREB", min_value=0)
+    reb = st.number_input("REB", min_value=0)
+    ast = st.number_input("AST", min_value=0)
+    stl = st.number_input("STL", min_value=0)
+    blk = st.number_input("BLK", min_value=0)
+    tov = st.number_input("TOV", min_value=0)
 
     option_10 = st.selectbox(
         "What type of investors are you ?",

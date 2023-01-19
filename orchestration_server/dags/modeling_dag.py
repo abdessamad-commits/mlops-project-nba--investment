@@ -399,7 +399,7 @@ default_args = {
 
 # define the DAG with the default arguments
 with DAG(
-    "testing_dags_20", default_args=default_args, schedule_interval=timedelta(hours=1)
+    "ml-workflow", default_args=default_args, schedule_interval=timedelta(hours=1)
 ) as dag:
 
     # define the tasks of the DAG

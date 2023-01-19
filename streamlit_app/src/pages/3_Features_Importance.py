@@ -6,7 +6,6 @@ import xgboost as xgb
 from helpers import (
     feature_importance_logistic_regression,
     feature_importance_tree_model,
-    pearson_corr,
     read_dataset,
 )
 from sklearn.ensemble import RandomForestClassifier
