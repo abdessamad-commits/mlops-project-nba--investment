@@ -21401,3 +21401,66 @@
 [2023-01-19 12:01:34,488] {logging_mixin.py:104} INFO - [2023-01-19 12:01:34,488] {dag.py:1818} INFO - Sync 1 DAGs
 [2023-01-19 12:01:34,506] {logging_mixin.py:104} INFO - [2023-01-19 12:01:34,505] {dag.py:2273} INFO - Setting next_dagrun for ml-workflow to 2023-01-19T12:01:34.197853+00:00
 [2023-01-19 12:01:34,518] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/modeling_dag.py took 3.265 seconds
+[2023-01-19 12:01:44,575] {scheduler_job.py:182} INFO - Started process (PID=14783) to work on /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:01:44,577] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/modeling_dag.py for tasks to queue
+[2023-01-19 12:01:44,577] {logging_mixin.py:104} INFO - [2023-01-19 12:01:44,577] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:01:45,555] {logging_mixin.py:104} WARNING - /opt/airflow/dags/modeling_dag.py:6 FutureWarning: MLflow support for Python 3.6 is deprecated and will be dropped in an upcoming release. At that point, existing Python 3.6 workflows that use MLflow will continue to work without modification, but Python 3.6 users will no longer get access to the latest MLflow features and bugfixes. We recommend that you upgrade to Python 3.7 or newer.
+[2023-01-19 12:01:46,074] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-01-19 12:01:46,079] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['ml-workflow']) retrieved from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:01:46,090] {logging_mixin.py:104} INFO - [2023-01-19 12:01:46,090] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-01-19 12:01:46,102] {logging_mixin.py:104} INFO - [2023-01-19 12:01:46,102] {dag.py:2273} INFO - Setting next_dagrun for ml-workflow to 2023-01-19T12:01:46.073155+00:00
+[2023-01-19 12:01:46,112] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/modeling_dag.py took 1.540 seconds
+[2023-01-19 12:01:56,159] {scheduler_job.py:182} INFO - Started process (PID=14789) to work on /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:01:56,160] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/modeling_dag.py for tasks to queue
+[2023-01-19 12:01:56,160] {logging_mixin.py:104} INFO - [2023-01-19 12:01:56,160] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:01:57,533] {logging_mixin.py:104} WARNING - /opt/airflow/dags/modeling_dag.py:6 FutureWarning: MLflow support for Python 3.6 is deprecated and will be dropped in an upcoming release. At that point, existing Python 3.6 workflows that use MLflow will continue to work without modification, but Python 3.6 users will no longer get access to the latest MLflow features and bugfixes. We recommend that you upgrade to Python 3.7 or newer.
+[2023-01-19 12:01:58,052] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-01-19 12:01:58,057] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['ml-workflow']) retrieved from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:01:58,076] {logging_mixin.py:104} INFO - [2023-01-19 12:01:58,076] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-01-19 12:01:58,087] {logging_mixin.py:104} INFO - [2023-01-19 12:01:58,087] {dag.py:2273} INFO - Setting next_dagrun for ml-workflow to 2023-01-19T12:01:58.051505+00:00
+[2023-01-19 12:01:58,096] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/modeling_dag.py took 1.941 seconds
+[2023-01-19 12:02:08,143] {scheduler_job.py:182} INFO - Started process (PID=14795) to work on /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:08,145] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/modeling_dag.py for tasks to queue
+[2023-01-19 12:02:08,146] {logging_mixin.py:104} INFO - [2023-01-19 12:02:08,146] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:09,481] {logging_mixin.py:104} WARNING - /opt/airflow/dags/modeling_dag.py:6 FutureWarning: MLflow support for Python 3.6 is deprecated and will be dropped in an upcoming release. At that point, existing Python 3.6 workflows that use MLflow will continue to work without modification, but Python 3.6 users will no longer get access to the latest MLflow features and bugfixes. We recommend that you upgrade to Python 3.7 or newer.
+[2023-01-19 12:02:09,994] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-01-19 12:02:09,998] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['ml-workflow']) retrieved from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:10,011] {logging_mixin.py:104} INFO - [2023-01-19 12:02:10,010] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-01-19 12:02:10,022] {logging_mixin.py:104} INFO - [2023-01-19 12:02:10,022] {dag.py:2273} INFO - Setting next_dagrun for ml-workflow to 2023-01-19T12:02:09.993388+00:00
+[2023-01-19 12:02:10,032] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/modeling_dag.py took 1.892 seconds
+[2023-01-19 12:02:20,077] {scheduler_job.py:182} INFO - Started process (PID=14801) to work on /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:20,079] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/modeling_dag.py for tasks to queue
+[2023-01-19 12:02:20,080] {logging_mixin.py:104} INFO - [2023-01-19 12:02:20,080] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:21,086] {logging_mixin.py:104} WARNING - /opt/airflow/dags/modeling_dag.py:6 FutureWarning: MLflow support for Python 3.6 is deprecated and will be dropped in an upcoming release. At that point, existing Python 3.6 workflows that use MLflow will continue to work without modification, but Python 3.6 users will no longer get access to the latest MLflow features and bugfixes. We recommend that you upgrade to Python 3.7 or newer.
+[2023-01-19 12:02:21,631] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-01-19 12:02:21,635] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['ml-workflow']) retrieved from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:21,648] {logging_mixin.py:104} INFO - [2023-01-19 12:02:21,648] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-01-19 12:02:21,660] {logging_mixin.py:104} INFO - [2023-01-19 12:02:21,660] {dag.py:2273} INFO - Setting next_dagrun for ml-workflow to 2023-01-19T12:02:21.630202+00:00
+[2023-01-19 12:02:21,668] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/modeling_dag.py took 1.595 seconds
+[2023-01-19 12:02:31,725] {scheduler_job.py:182} INFO - Started process (PID=14807) to work on /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:31,727] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/modeling_dag.py for tasks to queue
+[2023-01-19 12:02:31,728] {logging_mixin.py:104} INFO - [2023-01-19 12:02:31,728] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:33,413] {logging_mixin.py:104} WARNING - /opt/airflow/dags/modeling_dag.py:6 FutureWarning: MLflow support for Python 3.6 is deprecated and will be dropped in an upcoming release. At that point, existing Python 3.6 workflows that use MLflow will continue to work without modification, but Python 3.6 users will no longer get access to the latest MLflow features and bugfixes. We recommend that you upgrade to Python 3.7 or newer.
+[2023-01-19 12:02:34,282] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-01-19 12:02:34,289] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['ml-workflow']) retrieved from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:34,316] {logging_mixin.py:104} INFO - [2023-01-19 12:02:34,316] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-01-19 12:02:34,335] {logging_mixin.py:104} INFO - [2023-01-19 12:02:34,334] {dag.py:2273} INFO - Setting next_dagrun for ml-workflow to 2023-01-19T12:02:34.281167+00:00
+[2023-01-19 12:02:34,354] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/modeling_dag.py took 2.634 seconds
+[2023-01-19 12:02:44,459] {scheduler_job.py:182} INFO - Started process (PID=14813) to work on /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:44,461] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/modeling_dag.py for tasks to queue
+[2023-01-19 12:02:44,462] {logging_mixin.py:104} INFO - [2023-01-19 12:02:44,462] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:45,462] {logging_mixin.py:104} WARNING - /opt/airflow/dags/modeling_dag.py:6 FutureWarning: MLflow support for Python 3.6 is deprecated and will be dropped in an upcoming release. At that point, existing Python 3.6 workflows that use MLflow will continue to work without modification, but Python 3.6 users will no longer get access to the latest MLflow features and bugfixes. We recommend that you upgrade to Python 3.7 or newer.
+[2023-01-19 12:02:46,172] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-01-19 12:02:46,176] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['ml-workflow']) retrieved from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:46,188] {logging_mixin.py:104} INFO - [2023-01-19 12:02:46,188] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-01-19 12:02:46,199] {logging_mixin.py:104} INFO - [2023-01-19 12:02:46,199] {dag.py:2273} INFO - Setting next_dagrun for ml-workflow to 2023-01-19T12:02:46.171132+00:00
+[2023-01-19 12:02:46,207] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/modeling_dag.py took 1.753 seconds
+[2023-01-19 12:02:56,253] {scheduler_job.py:182} INFO - Started process (PID=14819) to work on /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:56,254] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/modeling_dag.py for tasks to queue
+[2023-01-19 12:02:56,255] {logging_mixin.py:104} INFO - [2023-01-19 12:02:56,255] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:57,265] {logging_mixin.py:104} WARNING - /opt/airflow/dags/modeling_dag.py:6 FutureWarning: MLflow support for Python 3.6 is deprecated and will be dropped in an upcoming release. At that point, existing Python 3.6 workflows that use MLflow will continue to work without modification, but Python 3.6 users will no longer get access to the latest MLflow features and bugfixes. We recommend that you upgrade to Python 3.7 or newer.
+[2023-01-19 12:02:57,889] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.6/site-packages/airflow/utils/decorators.py:94 DeprecationWarning: provide_context is deprecated as of 2.0 and is no longer required
+[2023-01-19 12:02:57,896] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['ml-workflow']) retrieved from /opt/airflow/dags/modeling_dag.py
+[2023-01-19 12:02:57,909] {logging_mixin.py:104} INFO - [2023-01-19 12:02:57,909] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-01-19 12:02:57,920] {logging_mixin.py:104} INFO - [2023-01-19 12:02:57,920] {dag.py:2273} INFO - Setting next_dagrun for ml-workflow to 2023-01-19T12:02:57.888247+00:00
+[2023-01-19 12:02:57,928] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/modeling_dag.py took 1.679 seconds
