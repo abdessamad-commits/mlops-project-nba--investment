@@ -1,0 +1,82 @@
+[2023-01-25T23:09:15.206+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: better_workflow_3.transition_best_model_version_to_prod_recall_task manual__2023-01-25T23:03:09.712256+00:00 [queued]>
+[2023-01-25T23:09:15.217+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: better_workflow_3.transition_best_model_version_to_prod_recall_task manual__2023-01-25T23:03:09.712256+00:00 [queued]>
+[2023-01-25T23:09:15.217+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-25T23:09:15.217+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 4
+[2023-01-25T23:09:15.217+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-25T23:09:15.231+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): transition_best_model_version_to_prod_recall_task> on 2023-01-25 23:03:09.712256+00:00
+[2023-01-25T23:09:15.240+0000] {standard_task_runner.py:55} INFO - Started process 594 to run task
+[2023-01-25T23:09:15.246+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'better_workflow_3', 'transition_best_model_version_to_prod_recall_task', 'manual__2023-01-25T23:03:09.712256+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpzp0xgyb8']
+[2023-01-25T23:09:15.250+0000] {standard_task_runner.py:83} INFO - Job 11: Subtask transition_best_model_version_to_prod_recall_task
+[2023-01-25T23:09:15.269+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.9/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2023-01-25T23:09:15.326+0000] {task_command.py:388} INFO - Running <TaskInstance: better_workflow_3.transition_best_model_version_to_prod_recall_task manual__2023-01-25T23:03:09.712256+00:00 [running]> on host 69914ba18a5b
+[2023-01-25T23:09:15.423+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=baahmedabdessamad@gmail.com
+AIRFLOW_CTX_DAG_OWNER=abdessamad
+AIRFLOW_CTX_DAG_ID=better_workflow_3
+AIRFLOW_CTX_TASK_ID=transition_best_model_version_to_prod_recall_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-25T23:03:09.712256+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-25T23:03:09.712256+00:00
+[2023-01-25T23:09:15.603+0000] {logging_mixin.py:137} WARNING - 2023/01/25 23:09:15 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh()
+
+All git commands will error until this is rectified.
+
+This initial warning can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|none|n|0: for no warning or exception
+    - warn|w|warning|1: for a printed warning
+    - error|e|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2023-01-25T23:09:16.003+0000] {logging_mixin.py:137} WARNING - 2023/01/25 23:09:16 WARNING mlflow.pyfunc: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - pandas (current: 1.5.2, required: pandas==1.4.2)
+ - scikit-learn (current: 1.2.1, required: scikit-learn==1.1.0)
+ - xgboost (current: 1.7.3, required: xgboost==1.7.2)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[2023-01-25T23:09:16.360+0000] {logging_mixin.py:137} WARNING - 2023/01/25 23:09:16 WARNING mlflow.pyfunc: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - pandas (current: 1.5.2, required: pandas==1.4.2)
+ - scikit-learn (current: 1.2.1, required: scikit-learn==1.1.0)
+ - xgboost (current: 1.7.3, required: xgboost==1.7.2)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[2023-01-25T23:09:16.744+0000] {logging_mixin.py:137} WARNING - 2023/01/25 23:09:16 WARNING mlflow.pyfunc: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - pandas (current: 1.5.2, required: pandas==1.4.2)
+ - scikit-learn (current: 1.2.1, required: scikit-learn==1.1.0)
+ - xgboost (current: 1.7.3, required: xgboost==1.7.2)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[2023-01-25T23:09:17.218+0000] {logging_mixin.py:137} WARNING - 2023/01/25 23:09:17 WARNING mlflow.pyfunc: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - pandas (current: 1.5.2, required: pandas==1.4.2)
+ - scikit-learn (current: 1.2.1, required: scikit-learn==1.1.0)
+ - xgboost (current: 1.7.3, required: xgboost==1.7.2)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[2023-01-25T23:09:17.685+0000] {logging_mixin.py:137} WARNING - 2023/01/25 23:09:17 WARNING mlflow.pyfunc: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - pandas (current: 1.5.2, required: pandas==1.4.2)
+ - psutil (current: 5.9.4, required: psutil==5.9.0)
+ - scikit-learn (current: 1.2.1, required: scikit-learn==1.1.0)
+ - typing-extensions (current: 4.4.0, required: typing-extensions==4.2.0)
+ - xgboost (current: 1.7.3, required: xgboost==1.7.2)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[2023-01-25T23:09:18.239+0000] {logging_mixin.py:137} WARNING - 2023/01/25 23:09:18 WARNING mlflow.pyfunc: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - pandas (current: 1.5.2, required: pandas==1.4.2)
+ - psutil (current: 5.9.4, required: psutil==5.9.0)
+ - scikit-learn (current: 1.2.1, required: scikit-learn==1.1.0)
+ - typing-extensions (current: 4.4.0, required: typing-extensions==4.2.0)
+ - xgboost (current: 1.7.3, required: xgboost==1.7.2)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[2023-01-25T23:09:18.877+0000] {logging_mixin.py:137} WARNING - 2023/01/25 23:09:18 WARNING mlflow.pyfunc: Detected one or more mismatches between the model's dependencies and the current Python environment:
+ - pandas (current: 1.5.2, required: pandas==1.4.2)
+ - psutil (current: 5.9.4, required: psutil==5.9.0)
+ - scikit-learn (current: 1.2.1, required: scikit-learn==1.1.0)
+ - typing-extensions (current: 4.4.0, required: typing-extensions==4.2.0)
+ - xgboost (current: 1.7.3, required: xgboost==1.7.2)
+To fix the mismatches, call `mlflow.pyfunc.get_model_dependencies(model_uri)` to fetch the model's environment and install dependencies using the resulting environment file.
+[2023-01-25T23:09:21.205+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-25T23:09:21.222+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=better_workflow_3, task_id=transition_best_model_version_to_prod_recall_task, execution_date=20230125T230309, start_date=20230125T230915, end_date=20230125T230921
+[2023-01-25T23:09:21.262+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-25T23:09:21.278+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

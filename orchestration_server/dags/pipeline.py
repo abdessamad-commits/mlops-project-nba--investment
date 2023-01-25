@@ -133,7 +133,7 @@ class Pipeline:
                 booster = xgb.train(
                     params=params,  # Hyperparameters
                     dtrain=train,  # Training data
-                    num_boost_round=80,  # Train for 1000 rounds
+                    num_boost_round=800,  # Train for 1000 rounds
                     evals=[
                         (valid, "validation")
                     ],  # Evaluate on the validation data at each iteration of training
@@ -222,7 +222,7 @@ class Pipeline:
             booster = xgb.train(
                 params=best_result,  # Hyperparameters
                 dtrain=train,  # Training data
-                num_boost_round=100,  # Train for 1000 rounds
+                num_boost_round=800,  # Train for 1000 rounds
             )
 
             # Log the model to MLFlow registry
