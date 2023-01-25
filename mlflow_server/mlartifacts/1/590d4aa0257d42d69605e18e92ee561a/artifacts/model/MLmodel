@@ -1,0 +1,30 @@
+artifact_path: model
+flavors:
+  python_function:
+    data: model.None
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.9.15
+  xgboost:
+    code: null
+    data: model.None
+    model_class: xgboost.core.Booster
+    model_format: null
+    xgb_version: 1.7.2
+mlflow_version: 2.1.1
+model_uuid: f1299ea4815e4b4c8355f0b16530319f
+run_id: 590d4aa0257d42d69605e18e92ee561a
+signature:
+  inputs: '[{"name": "GP", "type": "double"}, {"name": "MIN", "type": "double"}, {"name":
+    "PTS", "type": "double"}, {"name": "FGM", "type": "double"}, {"name": "FGA", "type":
+    "double"}, {"name": "FG%", "type": "double"}, {"name": "3P Made", "type": "double"},
+    {"name": "3PA", "type": "double"}, {"name": "3P%", "type": "double"}, {"name":
+    "FTM", "type": "double"}, {"name": "FTA", "type": "double"}, {"name": "FT%", "type":
+    "double"}, {"name": "OREB", "type": "double"}, {"name": "DREB", "type": "double"},
+    {"name": "REB", "type": "double"}, {"name": "AST", "type": "double"}, {"name":
+    "STL", "type": "double"}, {"name": "BLK", "type": "double"}, {"name": "TOV", "type":
+    "double"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+utc_time_created: '2023-01-12 12:08:29.577575'

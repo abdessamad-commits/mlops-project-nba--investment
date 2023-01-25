@@ -1,0 +1,10 @@
+streamlit==1.16.0
+numpy
+pandas 
+plotly 
+scipy
+altair
+statsmodels
+scikit-learn
+xgboost
+minio
