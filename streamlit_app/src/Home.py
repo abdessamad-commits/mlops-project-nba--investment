@@ -11,7 +11,7 @@ st.sidebar.success("Select a page above.")
 
 st.markdown(
     """
-    This web APP containes the EDA of the basketball investment data. you can
+    This web APP contains the EDA of the basketball investment data. you can
     also try the model to predict if a basketball player will be a good investment or not 
     by providing it's stats.
     - To view the tracking and details about the deployed model visit [mlflow service](http://20.224.70.229:5000/)

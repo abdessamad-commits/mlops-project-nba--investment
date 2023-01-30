@@ -3544,3 +3544,9 @@ Stack trace:
 2023-01-26 09:23:14 - root - INFO - {'input_data': {'GP': 168.0, 'MIN': 7.0, 'PTS': 89.0, 'FGM': 55.0, 'FGA': 55.0, 'FG%': 181.0, '3P Made': 127.0, '3PA': 50.0, '3P%': 146.0, 'FTM': 186.0, 'FTA': 91.0, 'FT%': 4.0, 'OREB': 34.0, 'DREB': 61.0, 'REB': 181.0, 'AST': 182.0, 'STL': 17.0, 'BLK': 177.0, 'TOV': 199.0}, 'model_name': 'nba-investment-model-f1', 'prediction': 1}
 2023-01-26 09:23:14 - elastic_transport.transport - INFO - HEAD http://elasticsearch:9200/nba-players-investment [status:200 duration:0.002s]
 2023-01-26 09:23:14 - elastic_transport.transport - INFO - POST http://elasticsearch:9200/nba-players-investment/_doc [status:201 duration:0.012s]
+2023-01-27 10:19:12 - root - INFO - {'input_data': {'GP': 0.0, 'MIN': 0.0, 'PTS': 0.0, 'FGM': 0.0, 'FGA': 0.0, 'FG%': 0.0, '3P Made': 0.0, '3PA': 0.0, '3P%': 0.0, 'FTM': 0.0, 'FTA': 0.0, 'FT%': 0.0, 'OREB': 0.0, 'DREB': 0.0, 'REB': 0.0, 'AST': 0.0, 'STL': 0.0, 'BLK': 0.0, 'TOV': 0.0}, 'model_name': 'nba-investment-model-recall', 'prediction': 0}
+2023-01-27 10:19:12 - elastic_transport.transport - INFO - HEAD http://elasticsearch:9200/nba-players-investment [status:200 duration:0.002s]
+2023-01-27 10:19:12 - elastic_transport.transport - INFO - POST http://elasticsearch:9200/nba-players-investment/_doc [status:201 duration:0.012s]
+2023-01-27 13:45:57 - root - INFO - {'input_data': {'GP': 0.0, 'MIN': 0.0, 'PTS': 0.0, 'FGM': 0.0, 'FGA': 0.0, 'FG%': 0.0, '3P Made': 0.0, '3PA': 0.0, '3P%': 0.0, 'FTM': 0.0, 'FTA': 0.0, 'FT%': 0.0, 'OREB': 0.0, 'DREB': 0.0, 'REB': 0.0, 'AST': 0.0, 'STL': 0.0, 'BLK': 0.0, 'TOV': 0.0}, 'model_name': 'nba-investment-model-f1', 'prediction': 0}
+2023-01-27 13:45:57 - elastic_transport.transport - INFO - HEAD http://elasticsearch:9200/nba-players-investment [status:200 duration:0.003s]
+2023-01-27 13:45:57 - elastic_transport.transport - INFO - POST http://elasticsearch:9200/nba-players-investment/_doc [status:201 duration:0.013s]
